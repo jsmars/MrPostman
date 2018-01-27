@@ -19,7 +19,7 @@ public class TableBelt : MonoBehaviour
 
     }
 
-    private ConveyorSubjectBehavior ValidateCollisionObject(Collider collider) 
+    private ConveyorSubjectBehavior SetupCollisionObject(Collider collider) 
     {
         var isConveyorSubject = collider.tag == "ConveyorSubject";
         if (!isConveyorSubject)
@@ -30,27 +30,19 @@ public class TableBelt : MonoBehaviour
         var conveyorSubjectScript = collider.GetComponent<ConveyorSubjectBehavior>();
         if (conveyorSubjectScript == null)
         {
-            throw new Exception("THIS IS SO WRONG");
+            conveyorSubjectScript = collider.gameObject.AddComponent<ConveyorSubjectBehavior>();
         }
 
+        conveyorSubjectScript.ConstantSpeed = ConstantSpeed;
         return conveyorSubjectScript;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        var conveyorSubjectScript = ValidateCollisionObject(collision.collider);
+        var conveyorSubjectScript = SetupCollisionObject(collider);
         if (conveyorSubjectScript != null)
         {
-            conveyorSubjectScript.EnteredConveyorBelt(ConstantSpeed, transform);
-        }
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        var conveyorSubjectScript = ValidateCollisionObject(collision.collider);
-        if (conveyorSubjectScript != null)
-        {
-            conveyorSubjectScript.ExitedConveyorBelt(ConstantSpeed, transform);
+            conveyorSubjectScript.EnteredConveyorBelt(transform);
         }
     }
 }
