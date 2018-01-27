@@ -28,7 +28,6 @@ public class ConveyorSubjectBehavior : MonoBehaviour
     public void EnteredConveyorBelt(Transform beltTransform)
     {
         _enteredConveyorBelts.Add(beltTransform);
-        Debug.Log(string.Format("queuedBelt {0}", _enteredConveyorBelts.Count));
         if (!HasQueuedConveyorBelt())
         {
             MoveOnBelt(beltTransform);
@@ -42,7 +41,6 @@ public class ConveyorSubjectBehavior : MonoBehaviour
 
         if (queuedBelt)
         {
-            Debug.Log("queuedBelt true");
             MoveOnBelt(_enteredConveyorBelts[0]);
         }
     }
@@ -60,7 +58,6 @@ public class ConveyorSubjectBehavior : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        Debug.Log("OnTriggerExit");
         ExitedConveyorBelt(collider.transform);   
     }
 }
