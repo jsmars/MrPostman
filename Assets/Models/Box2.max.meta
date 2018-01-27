@@ -9,18 +9,24 @@ ModelImporter:
     100002: //RootNode
     100004: Line001
     100006: Stamp
+    100008: Line002
     400000: Box001
     400002: //RootNode
     400004: Line001
     400006: Stamp
+    400008: Line002
     2100000: 01 - Default
     2100002: StampMaterial
+    2100004: 02 - Default
     2300000: Box001
     2300002: Stamp
+    2300004: Line001
     3300000: Box001
     3300002: Stamp
+    3300004: Line001
     4300000: Box001
     4300002: Stamp
+    4300004: Line001
     9500000: //RootNode
   externalObjects: {}
   materials:
