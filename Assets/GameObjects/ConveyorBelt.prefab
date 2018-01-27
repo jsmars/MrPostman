@@ -827,7 +827,7 @@ MonoBehaviour:
   - {fileID: 1931373069095090, guid: c30e6717a60961b409cb0ee84bd4b259, type: 2}
   LetterSpawn: {fileID: 4515183824361532}
   WaveLengthConstant: 10
-  WavePauseTimer: 20
+  WavePauseTimer: 4
   Randomness: 1
 --- !u!114 &114462300308947242
 MonoBehaviour:

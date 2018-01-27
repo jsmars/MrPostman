@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114744063204618622}
   - component: {fileID: 114614932750633686}
   - component: {fileID: 114823453170533774}
-  - component: {fileID: 114873647877646696}
+  - component: {fileID: 114934172659516360}
   m_Layer: 0
   m_Name: Letter1
   m_TagString: Untagged
@@ -295,7 +295,7 @@ MonoBehaviour:
   LetterType: 0
 --- !u!114 &114934172659516360
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1918100532213140}
