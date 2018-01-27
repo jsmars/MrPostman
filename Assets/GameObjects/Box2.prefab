@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 54962852441153270}
   - component: {fileID: 114977062054278278}
   - component: {fileID: 114337566485449320}
+  - component: {fileID: 114354572344020132}
   m_Layer: 0
   m_Name: Box2
   m_TagString: Untagged
@@ -335,6 +336,17 @@ MonoBehaviour:
   customOutlineModels: []
   customOutlineModelPaths: []
   enableSubmeshHighlight: 0
+--- !u!114 &114354572344020132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1931373069095090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f80b75882dd91c4f93c15b18161df0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114496000704456120
 MonoBehaviour:
   m_ObjectHideFlags: 1
