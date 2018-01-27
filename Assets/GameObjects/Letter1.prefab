@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Models: []
-  Score: 0
+  Score: 1
   LetterColor: 0
   LetterNumber: 0
 --- !u!114 &114934172659516360
