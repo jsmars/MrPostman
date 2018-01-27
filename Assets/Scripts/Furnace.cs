@@ -26,8 +26,8 @@ public class Furnace : MonoBehaviour {
             return;
         }
 
-        GetComponent<AudioSource>().Play();
         Destroy(collision.collider.gameObject);
+        GetComponent<AudioSource>().Play();
     }
 
 }
