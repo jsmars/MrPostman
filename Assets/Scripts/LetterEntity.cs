@@ -19,9 +19,8 @@ public class LetterEntity : MonoBehaviour {
     public bool Used { get; private set; }
 
     // Use this for initialization
-    void Start () {
-
-
+    void Start () 
+    {
         Helpers.SetStampColor(gameObject, LetterColor);
     }
 	

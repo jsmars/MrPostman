@@ -410,4 +410,6 @@ MonoBehaviour:
   Score: 2
   LetterColor: 0
   LetterNumber: 0
+  Weight: 4.8
+  NeedsVAT: 0
   LetterType: 2

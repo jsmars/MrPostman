@@ -115,11 +115,6 @@ public class ConveyorBehavior : MonoBehaviour {
 
         _letterList = LetterObjects.Values.Where(x => allowedLetterTypes.Contains(x.Script.LetterType)).ToList();
     }
-
-    private static bool AnyOf(LetterObj x)
-    {
-        return x.Script.LetterType == LetterTypeEnum.LetterSmall || x.Script.LetterType == LetterTypeEnum.LetterBig;
-    }
     
     private void SpawnLetter()
     {
