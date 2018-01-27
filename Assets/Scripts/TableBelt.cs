@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TableBelt : MonoBehaviour
 {
-    public int ConstantSpeed;
+    public float ConstantSpeed;
 
     // Use this for initialization
     void Start()
