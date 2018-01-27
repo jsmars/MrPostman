@@ -25,12 +25,13 @@ public class ConveyorBehavior : MonoBehaviour {
         }
 	}
 
+
     void SpawnLetter()
     {
-        var spawnPosition = letterSpawn.position + new Vector3(Random.Range(-0.7f, 0.7f), Random.Range(-1.0f, 1.0f), 0);
-        var spawnRotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(110.0f, 130.0f)));
+        //var spawnPosition = letterSpawn.position + new Vector3(Random.Range(-0.7f, 0.7f), Random.Range(-1.0f, 1.0f), 0);
+        var spawnRotation = Quaternion.Euler(new Vector3(0, Random.Range(0f, 360.0f), 0));
 
-        var letter = (GameObject)Instantiate(letterPrefab, spawnPosition, spawnRotation);
+        var letter = (GameObject)Instantiate(letterPrefab, letterSpawn.position, spawnRotation);
         var randomSpawnTime = Random.Range(_randomNess, _randomNess+1);
         _timeToSpawn = randomSpawnTime;
     }
