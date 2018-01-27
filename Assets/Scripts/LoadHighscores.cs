@@ -11,7 +11,23 @@ public class LoadHighscores : MonoBehaviour
 
 	public void Start()
 	{
-		var highscores = new List<Highscore>()
+		Events.instance.AddListener<GameOverEvent>(UpdateScores);
+		UpdateScores();
+	}
+
+	public void OnDestroy()
+	{
+		Events.instance.RemoveListener<GameOverEvent>(UpdateScores);
+	}
+
+	private void UpdateScores(GameOverEvent e)
+	{
+		UpdateScores();
+	}
+
+	private void UpdateScores()
+	{
+		var response = new ScoreResponse(100, 10, new List<Highscore>()
 		{
 			new Highscore("SvDvorak", 999),
 			new Highscore("Erik Lenells", 800),
@@ -23,13 +39,40 @@ public class LoadHighscores : MonoBehaviour
 			new Highscore("SuperCoolGuy111", 10),
 			new Highscore("!!11Snipah11!!", 9),
 			new Highscore("ThisGameSucks", 1)
-		};
+		});
 
-		foreach (var highscore in highscores)
+		foreach (var highscore in response.Highscores)
 		{
 			var panel = Instantiate(HighscoreTemplate, HighscoresPanel, false);
 			panel.GetComponent<HighscoreSetter>().Set(highscore);
 		}
+
+		PersonalBest.text = response.PersonalScore.ToString();
+		TotalPlays.text = response.TotalPlays.ToString();
+	}
+
+	public void Reload()
+	{
+		foreach (Transform child in HighscoresPanel)
+		{
+			Destroy(child.gameObject);
+		}
+
+		UpdateScores();
+	}
+}
+
+public class ScoreResponse
+{
+	public float PersonalScore { get; private set; }
+	public int TotalPlays { get; private set; }
+	public List<Highscore> Highscores { get; private set; }
+
+	public ScoreResponse(float personalScore, int totalPlays, List<Highscore> scores)
+	{
+		PersonalScore = personalScore;
+		TotalPlays = totalPlays;
+		Highscores = scores;
 	}
 }
 
