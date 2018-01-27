@@ -7,7 +7,6 @@ TagManager:
   - FxTemporaire
   - projectile
   - TeleportIgnore
-  - ConveyorSubject
   layers:
   - Default
   - TransparentFX
