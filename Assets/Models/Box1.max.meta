@@ -14,6 +14,7 @@ ModelImporter:
     2100000: 01 - Default
     2100002: 'Material #36'
     2100004: LetterMaterial
+    2100006: StampMaterial
     2300000: Box001
     2300002: Stamp
     3300000: Box001
