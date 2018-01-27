@@ -7,10 +7,20 @@ public class BinCollected : MonoBehaviour
 	private readonly HashSet<GameObject> _binCollected = new HashSet<GameObject>();
     public LetterColor LetterColor;
     public int LetterNumber;
-
-    public void OnTriggerEnter(Collider other)
+	private bool _gameOver;
+	public void Start()
 	{
-		if(!HasCollected(other))
+		Events.instance.AddListener<GameOverEvent>(StopCollecting);
+	}
+
+	private void StopCollecting(GameOverEvent e)
+	{
+		_gameOver = true;
+	}
+
+	public void OnTriggerEnter(Collider other)
+	{
+		if(!_gameOver && !HasCollected(other))		
 		{
             var letter = TryGetLetter(other);
             if (letter != null && letter.TryScore(this))

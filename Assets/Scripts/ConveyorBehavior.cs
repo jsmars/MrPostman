@@ -10,11 +10,14 @@ public class ConveyorBehavior : MonoBehaviour {
     private float _timeToSpawn;
 	public float _randomNess;
 	private Bounds _spawnArea;
+	private bool _gameOver;
 
     public void Start ()
 	{
 		_spawnArea = letterSpawn.GetComponent<Collider>().bounds;
 		_timeToSpawn = 2;
+
+        Events.instance.AddListener<GameOverEvent>(e => _gameOver = true);
 
         foreach (var item in letterPrefabs)
         {
@@ -28,6 +31,11 @@ public class ConveyorBehavior : MonoBehaviour {
 	
 	public void Update () 
     {
+	    if (_gameOver)
+	    {
+		    return;
+	    }
+
         _timeToSpawn -= Time.deltaTime;
         if (_timeToSpawn < 0)
         {
@@ -35,11 +43,11 @@ public class ConveyorBehavior : MonoBehaviour {
         }
 	}
 
+
     void SpawnLetter()
     {
         var spawnPosition = letterSpawn.position + GetRandomPointInSpawnArea();
-        var spawnRotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(110.0f, 130.0f)));
-
+        var spawnRotation = Quaternion.Euler(new Vector3(0, Random.Range(0f, 360.0f), 0));
         var randomSpawnTime = Random.Range(_randomNess, _randomNess+1);
         _timeToSpawn = randomSpawnTime;
 

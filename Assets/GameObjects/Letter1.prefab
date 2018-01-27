@@ -58,9 +58,10 @@ GameObject:
   - component: {fileID: 114362679130478600}
   - component: {fileID: 114744063204618622}
   - component: {fileID: 114614932750633686}
+  - component: {fileID: 114934172659516360}
   m_Layer: 0
   m_Name: Letter
-  m_TagString: Untagged
+  m_TagString: ConveyorSubject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,3 +276,14 @@ MonoBehaviour:
   onGrabCollisionDelay: 0
   destroyImmediatelyOnThrow: 1
   breakForce: 1500
+--- !u!114 &114934172659516360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918100532213140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c698ebc46ddafb4786ed39aab798e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
