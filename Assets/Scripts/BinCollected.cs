@@ -4,10 +4,12 @@ using UnityEngine;
 public class BinCollected : MonoBehaviour
 {
 	public ParticleSystem Particles;
+	public AudioSource CollectedSound;
 	private readonly HashSet<GameObject> _binCollected = new HashSet<GameObject>();
     public LetterColor LetterColor;
     public int LetterNumber;
 	private bool _gameOver;
+
 	public void Start()
 	{
 		Events.instance.AddListener<GameOverEvent>(StopCollecting);
@@ -27,6 +29,7 @@ public class BinCollected : MonoBehaviour
             {
                 //Destroy(other.gameObject);
                 Particles.Play();
+	            CollectedSound.Play();
                 _binCollected.Add(other.gameObject);
             }
 		}

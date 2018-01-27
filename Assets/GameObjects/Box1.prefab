@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 114708687127805540}
   - component: {fileID: 65054670409212310}
   - component: {fileID: 54583154106468238}
+  - component: {fileID: 114280063194325096}
   m_Layer: 0
   m_Name: Box1
-  m_TagString: Untagged
+  m_TagString: ConveyorSubject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,6 +236,21 @@ MonoBehaviour:
   onGrabCollisionDelay: 0
   destroyImmediatelyOnThrow: 1
   breakForce: 1500
+--- !u!114 &114280063194325096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416319276694920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a344360abaab4b4891d64f8eb660e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Models: []
+  Score: 1
+  LetterColor: 0
+  LetterNumber: 0
 --- !u!114 &114541263937946688
 MonoBehaviour:
   m_ObjectHideFlags: 1

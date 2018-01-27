@@ -21,7 +21,7 @@ public class ConveyorBehavior : MonoBehaviour {
 
         foreach (var item in letterPrefabs)
         {
-            LetterObjects[item.name] = new LetterObj()
+            LetterObjects[item.name] = new LetterObj
             {
                 GameObj = item,
                 Script = item.GetComponent<MakeLetter>(),
