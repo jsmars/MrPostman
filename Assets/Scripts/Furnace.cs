@@ -13,4 +13,16 @@ public class Furnace : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnCollisionEnter(Collision collision) 
+    {
+        var isConveyorSubject = collision.collider.GetComponent<LetterEntity>() != null;
+        if (!isConveyorSubject)
+        {
+            return;
+        }
+
+        Destroy(collision.collider.gameObject);
+    }
+
 }
