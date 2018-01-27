@@ -7,9 +7,16 @@ namespace Assets.Scripts.Enums
 {
     public enum LetterTypeEnum
     {
+        // Colored
         LetterSmall,
         LetterBig,
+        // Weighted packages
         PackageSmall,
-        PackageBig
+        PackageBig,
+        // Stamped
+        Stamped,
+        Numbered,
+        Illegal,
+
     }
 }
