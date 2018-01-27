@@ -17,7 +17,7 @@ public class ConveyorBehavior : MonoBehaviour {
 		_spawnArea = letterSpawn.GetComponent<Collider>().bounds;
 		_timeToSpawn = 2;
 
-        Events.instance.AddListener<GameOverEvent>(e => _gameOver = true);
+        Events.instance.AddListener<GameOverEvent>(SetGameOver);
 
         foreach (var item in letterPrefabs)
         {
@@ -28,7 +28,17 @@ public class ConveyorBehavior : MonoBehaviour {
             };
         }
 	}
-	
+
+	public void OnDestroy()
+	{
+		Events.instance.RemoveListener<GameOverEvent>(SetGameOver);
+	}
+
+	private void SetGameOver(GameOverEvent gameOverEvent)
+	{
+		_gameOver = true;
+	}
+
 	public void Update () 
     {
 	    if (_gameOver)
