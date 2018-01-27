@@ -24,7 +24,7 @@ public class ConveyorBehavior : MonoBehaviour {
             LetterObjects[item.name] = new LetterObj()
             {
                 GameObj = item,
-                Script = item.GetComponent<MakeLetter>(),
+                Script = item.GetComponent<LetterEntity>(),
             };
         }
 	}
@@ -56,7 +56,7 @@ public class ConveyorBehavior : MonoBehaviour {
         var type = list[Random.Range(0, list.Count)];
 
         var newObj = Instantiate(type.GameObj, spawnPosition, spawnRotation);
-        var newLetter = newObj.GetComponent<MakeLetter>();
+        var newLetter = newObj.GetComponent<LetterEntity>();
         newLetter.LetterColor = LetterColor.Blue;
     }
     
@@ -78,5 +78,5 @@ public class ConveyorBehavior : MonoBehaviour {
 public class LetterObj
 {
     public GameObject GameObj;
-    public MakeLetter Script;
+    public LetterEntity Script;
 }
