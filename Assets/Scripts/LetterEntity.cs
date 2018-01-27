@@ -21,7 +21,9 @@ public class LetterEntity : MonoBehaviour {
     // Use this for initialization
     void Start () 
     {
-        Helpers.SetStampColor(gameObject, LetterColor);
+        var letter = gameObject.GetComponent<LetterEntity>();
+        if (letter.LetterType == LetterTypeEnum.LetterBig || letter.LetterType == LetterTypeEnum.LetterSmall)
+            Helpers.SetStampColor(gameObject, LetterColor);
     }
 	
 	// Update is called once per frame

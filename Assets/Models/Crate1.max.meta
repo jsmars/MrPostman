@@ -68,6 +68,7 @@ ModelImporter:
     100120: Cate1_col
     100122: Group002
     100124: Text002
+    100126: Stamp
     400000: Box001
     400002: Box002
     400004: Box003
@@ -131,10 +132,12 @@ ModelImporter:
     400120: Cate1_col
     400122: Group002
     400124: Text002
+    400126: Stamp
     2100000: 'Material #36'
     2100002: 01 - Default
     2100004: 02 - Default
     2100006: 'Material #1090'
+    2100008: StampMaterial
     2300000: Box001
     2300002: Box002
     2300004: Box003
@@ -196,6 +199,7 @@ ModelImporter:
     2300116: Box058
     2300118: Cate1_col
     2300120: Text002
+    2300122: Stamp
     3300000: Box001
     3300002: Box002
     3300004: Box003
@@ -257,6 +261,7 @@ ModelImporter:
     3300116: Box058
     3300118: Cate1_col
     3300120: Text002
+    3300122: Stamp
     4300000: Box001
     4300002: Box002
     4300004: Box003
@@ -318,6 +323,7 @@ ModelImporter:
     4300116: Box056
     4300118: Box057
     4300120: Box058
+    4300122: Stamp
     9500000: //RootNode
   externalObjects: {}
   materials:
