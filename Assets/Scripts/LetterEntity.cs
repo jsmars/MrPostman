@@ -11,6 +11,8 @@ public class LetterEntity : MonoBehaviour {
 	public int Score;
     public LetterColor LetterColor;
     public int LetterNumber;
+    public float Weight;
+    public bool NeedsVAT;
     public LetterTypeEnum LetterType;
 
 
