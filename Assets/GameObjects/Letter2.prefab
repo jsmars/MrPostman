@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 65309486054115018}
   - component: {fileID: 54768878630332074}
   - component: {fileID: 114736233766020480}
+  - component: {fileID: 114574237666089916}
   m_Layer: 0
   m_Name: Letter2
   m_TagString: Untagged
@@ -218,6 +219,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3039359, y: 0.01903987, z: 0.40178925}
   m_Center: {x: -0.00040015578, y: 0.0043171644, z: 0.0011706352}
+--- !u!114 &114574237666089916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1059616245648854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 0.5
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!114 &114736233766020480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 1
-  touchHighlightColor: {r: 1, g: 1, b: 0, a: 0.634}
+  touchHighlightColor: {r: 1, g: 0, b: 1, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
@@ -254,10 +272,8 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114744063204618622, guid: 5af1c8e083912b745a962ab96f82d179,
-    type: 2}
-  secondaryGrabActionScript: {fileID: 114614932750633686, guid: 5af1c8e083912b745a962ab96f82d179,
-    type: 2}
+  grabAttachMechanicScript: {fileID: 114898791883205064}
+  secondaryGrabActionScript: {fileID: 114883080299598104}
   isUsable: 0
   holdButtonToUse: 1
   useOnlyIfGrabbed: 0

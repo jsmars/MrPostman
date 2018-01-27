@@ -58,8 +58,8 @@ GameObject:
   - component: {fileID: 114362679130478600}
   - component: {fileID: 114744063204618622}
   - component: {fileID: 114614932750633686}
-  - component: {fileID: 114934172659516360}
   - component: {fileID: 114823453170533774}
+  - component: {fileID: 114873647877646696}
   m_Layer: 0
   m_Name: Letter1
   m_TagString: Untagged
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 1
-  touchHighlightColor: {r: 1, g: 1, b: 0, a: 0}
+  touchHighlightColor: {r: 1, g: 0, b: 1, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
@@ -292,7 +292,7 @@ MonoBehaviour:
   Score: 1
   LetterColor: 0
   LetterNumber: 0
---- !u!114 &114934172659516360
+--- !u!114 &114873647877646696
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -300,7 +300,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1918100532213140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c698ebc46ddafb4786ed39aab798e98, type: 3}
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConstantSpeed: 0
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 0.5
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
