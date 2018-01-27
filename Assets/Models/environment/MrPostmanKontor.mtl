@@ -1,0 +1,49 @@
+# Revit Wavefront OBJ Exporter 2.9.5 - (c) 2017 www.inglegreen.com
+# File Created: 2018-01-27 17:39:52
+
+newmtl Default_Wall
+Ka 0.0000 0.0000 0.0000
+Kd 0.501960784313725 0.501960784313725 0.501960784313725 1.0
+d 1.00
+
+newmtl Undertak_-_vit
+Ka 0.0000 0.0000 0.0000
+Kd 1 1 1 1.0
+d 1.00
+map_Kd textures\
+map_bump %%
+
+newmtl Takpapp
+Ka 0.0000 0.0000 0.0000
+Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+d 1.00
+map_Kd textures\
+map_bump %%
+
+newmtl Door_-_Frame
+Ka 0.0000 0.0000 0.0000
+Kd 0.462745098039216 0.274509803921569 0.2 1.0
+d 1.00
+
+newmtl Door_-_Panel
+Ka 0.0000 0.0000 0.0000
+Kd 0.823529411764706 0.623529411764706 0.372549019607843 1.0
+d 1.00
+map_Kd textures\Woods & Plastics.Finish Carpentry.Wood.Red Birch.png
+
+newmtl Foder_vit
+Ka 0.0000 0.0000 0.0000
+Kd 1 1 1 1.0
+d 1.00
+map_Kd textures\
+map_bump %%
+
+newmtl Glass
+Ka 0.0000 0.0000 0.0000
+Kd 0 0.501960784313725 0.752941176470588 1.0
+d 0.10
+
+newmtl Regel_145_yttervgg_600cc
+Ka 0.0000 0.0000 0.0000
+Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+d 1.00

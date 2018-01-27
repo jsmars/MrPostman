@@ -6,11 +6,25 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Box001
+    100004: Stamp
     400000: //RootNode
+    400002: Box001
+    400004: Stamp
     2100000: 01 - Default
+    2100002: 'Material #11'
+    2100004: StampMaterial
     2300000: //RootNode
+    2300002: Box001
+    2300004: Stamp
     3300000: //RootNode
+    3300002: Box001
+    3300004: Stamp
     4300000: Box001
+    4300002: Stamp
+    6400000: //RootNode
+    6400002: Box001
+    6400004: Stamp
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -44,7 +58,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
