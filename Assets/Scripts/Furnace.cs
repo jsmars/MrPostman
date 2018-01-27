@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Furnace : MonoBehaviour {
 
+    public AudioClip Burn;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start () 
+    {
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = Burn;
 	}
 	
 	// Update is called once per frame
@@ -22,6 +26,7 @@ public class Furnace : MonoBehaviour {
             return;
         }
 
+        GetComponent<AudioSource>().Play();
         Destroy(collision.collider.gameObject);
     }
 
