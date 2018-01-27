@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 54583154106468238}
   - component: {fileID: 114751272374331496}
   - component: {fileID: 114153609881531594}
+  - component: {fileID: 114804538574810554}
   m_Layer: 0
   m_Name: Box1
   m_TagString: Untagged
@@ -310,4 +311,17 @@ MonoBehaviour:
   Score: 2
   LetterColor: 0
   LetterNumber: 0
+  Weight: 0
+  NeedsVAT: 0
   LetterType: 3
+--- !u!114 &114804538574810554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416319276694920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f80b75882dd91c4f93c15b18161df0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

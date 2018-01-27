@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 54768878630332074}
   - component: {fileID: 114736233766020480}
   - component: {fileID: 114574237666089916}
+  - component: {fileID: 114998030253228536}
   m_Layer: 0
   m_Name: Letter2
   m_TagString: Untagged
@@ -251,6 +252,8 @@ MonoBehaviour:
   Score: 1
   LetterColor: 0
   LetterNumber: 0
+  Weight: 0
+  NeedsVAT: 0
   LetterType: 1
 --- !u!114 &114859595570909818
 MonoBehaviour:
@@ -312,3 +315,14 @@ MonoBehaviour:
   onGrabCollisionDelay: 0
   destroyImmediatelyOnThrow: 1
   breakForce: 1500
+--- !u!114 &114998030253228536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1059616245648854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f80b75882dd91c4f93c15b18161df0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
