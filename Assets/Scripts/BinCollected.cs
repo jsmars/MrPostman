@@ -19,7 +19,7 @@ public class BinCollected : MonoBehaviour
 
 	public void OnTriggerEnter(Collider other)
 	{
-		if(!_gameOver && IsLetter(other) && !HasCollected(other))
+		if(!_gameOver && !HasCollected(other) && IsLetter(other))
 		{
 			//Destroy(other.gameObject);
 			Events.instance.Raise(new ScoreEvent(10));
