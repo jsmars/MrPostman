@@ -7,15 +7,23 @@ public class ConveyorBehavior : MonoBehaviour {
     private float _timeToSpawn;
 	public float _randomNess;
 	private Bounds _spawnArea;
+	private bool _gameOver;
 
 	public void Start ()
-    {
-        _spawnArea = letterSpawn.GetComponent<Collider>().bounds;
-        _timeToSpawn = 2;
+	{
+		_spawnArea = letterSpawn.GetComponent<Collider>().bounds;
+		_timeToSpawn = 2;
+
+		Events.instance.AddListener<GameOverEvent>(e => _gameOver = true);
 	}
 	
 	public void Update () 
     {
+	    if (_gameOver)
+	    {
+		    return;
+	    }
+
         _timeToSpawn -= Time.deltaTime;
         if (_timeToSpawn < 0)
         {
