@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadHighscores : MonoBehaviour
 {
 	public Transform HighscoresPanel;
 	public GameObject HighscoreTemplate;
+	public Text PersonalBest;
+	public Text TotalPlays;
 
 	public void Start()
 	{
