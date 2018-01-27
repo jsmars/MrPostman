@@ -391,6 +391,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Models: []
-  Score: 0
+  Score: 2
   LetterColor: 0
   LetterNumber: 0
