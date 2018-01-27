@@ -21,7 +21,7 @@ public class TableBelt : MonoBehaviour
 
     private ConveyorSubjectBehavior SetupCollisionObject(Collider collider) 
     {
-        var isConveyorSubject = collider.tag == "ConveyorSubject";
+        var isConveyorSubject = collider.GetComponent<MakeLetter>() != null;
         if (!isConveyorSubject)
         {
             return null;
