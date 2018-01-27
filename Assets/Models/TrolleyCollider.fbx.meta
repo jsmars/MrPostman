@@ -1,18 +1,40 @@
 fileFormatVersion: 2
-guid: 61adef714e83ef544a165b39586ab068
-timeCreated: 1517016007
+guid: 8297dfa133f07bf4597e79d193a5b17f
+timeCreated: 1517041001
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: 01 - Default
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Box001
-    6400000: //RootNode
-    9500000: //RootNode
+    100000: Camera
+    100002: Cube
+    100004: Lamp
+    100006: Object001
+    100008: Stamp
+    100010: //RootNode
+    400000: Camera
+    400002: Cube
+    400004: Lamp
+    400006: Object001
+    400008: Stamp
+    400010: //RootNode
+    2000000: Camera
+    2100000: No Name
+    2100002: StampMaterial
+    2100004: 'Material #36'
+    2100006: 01 - Default
+    2100008: 'Material #37'
+    2300000: Cube
+    2300002: Object001
+    2300004: Stamp
+    2300006: //RootNode
+    3300000: Cube
+    3300002: Object001
+    3300004: Stamp
+    3300006: //RootNode
+    4300000: Cube
+    4300002: Stamp
+    4300004: Object001
+    10800000: Lamp
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,7 +67,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -87,7 +109,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
