@@ -6,6 +6,16 @@ public class PresentGameOver : MonoBehaviour
 
 	public void Start()
 	{
-		Events.instance.AddListener<GameOverEvent>(e => GameOverText.SetActive(true));
+		Events.instance.AddListener<GameOverEvent>(ActivateGameOver);
+	}
+
+	public void OnDestroy()
+	{
+		Events.instance.RemoveListener<GameOverEvent>(ActivateGameOver);
+	}
+
+	private void ActivateGameOver(GameOverEvent e)
+	{
+		GameOverText.SetActive(true);
 	}
 }

@@ -22,12 +22,12 @@ GameObject:
   - component: {fileID: 114859595570909818}
   - component: {fileID: 114898791883205064}
   - component: {fileID: 114883080299598104}
-  - component: {fileID: 114736233766020480}
   - component: {fileID: 65309486054115018}
   - component: {fileID: 54768878630332074}
+  - component: {fileID: 114736233766020480}
   m_Layer: 0
   m_Name: Letter2
-  m_TagString: Untagged
+  m_TagString: ConveyorSubject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,8 +230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Models: []
-  Score: 0
-  Color: 0
+  Score: 1
+  LetterColor: 0
+  LetterNumber: 0
 --- !u!114 &114859595570909818
 MonoBehaviour:
   m_ObjectHideFlags: 1

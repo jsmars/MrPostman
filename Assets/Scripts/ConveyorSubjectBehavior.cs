@@ -7,6 +7,9 @@ public class ConveyorSubjectBehavior : MonoBehaviour
     private List<Transform> _enteredConveyorBelts = new List<Transform>();
     private Vector3 _currentVelocity = Vector3.zero;
     private Rigidbody _rigidBody;
+
+    public float ConstantSpeed;
+
     // Use this for initialization
     void Start()
     {
@@ -22,23 +25,23 @@ public class ConveyorSubjectBehavior : MonoBehaviour
         }
     }
 
-    public void EnteredConveyorBelt(int constantSpeed, Transform beltTransform)
+    public void EnteredConveyorBelt(Transform beltTransform)
     {
         _enteredConveyorBelts.Add(beltTransform);
         if (!HasQueuedConveyorBelt())
         {
-            MoveOnBelt(constantSpeed, beltTransform);
+            MoveOnBelt(beltTransform);
         }
     }
 
-    public void ExitedConveyorBelt(int constantSpeed, Transform beltTransform)
+    private void ExitedConveyorBelt(Transform beltTransform)
     {
         var queuedBelt = HasQueuedConveyorBelt();
         _enteredConveyorBelts.Remove(beltTransform);
 
         if (queuedBelt)
         {
-            MoveOnBelt(constantSpeed, _enteredConveyorBelts[0]);
+            MoveOnBelt(_enteredConveyorBelts[0]);
         }
     }
 
@@ -47,9 +50,14 @@ public class ConveyorSubjectBehavior : MonoBehaviour
         return _enteredConveyorBelts.Count > 1;
     }
 
-    private void MoveOnBelt(int constantSpeed, Transform beltTransform)
+    private void MoveOnBelt(Transform beltTransform)
     {
         var vector3 = beltTransform.right * -1.2f;
-        _currentVelocity = constantSpeed * vector3;
+        _currentVelocity = ConstantSpeed * vector3;
+    }   
+
+    void OnTriggerExit(Collider collider)
+    {
+        ExitedConveyorBelt(collider.transform);   
     }
 }

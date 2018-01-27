@@ -150,9 +150,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1961885709456458}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.99823207, y: -1.0957339, z: 0.65493536}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000008940696}
+  m_LocalPosition: {x: 0.136, y: 1.002, z: -0.405}
+  m_LocalScale: {x: 0.520426, y: 0.520426, z: 0.520426}
   m_Children:
   - {fileID: 4214486514642750}
   - {fileID: 4515183824361532}
@@ -183,7 +183,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514435202004484}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.39, y: 0.001, z: -2}
+  m_LocalPosition: {x: -3.39, y: -0.203, z: -2}
   m_LocalScale: {x: 5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4349109872348094}
@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 1144346574620024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.54, y: 1, z: 0}
-  m_LocalScale: {x: 5.2, y: 0.05, z: 1}
+  m_LocalScale: {x: 5.2, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4349109872348094}
   m_RootOrder: 2
@@ -222,8 +222,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1022723377458770}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -3.39, y: 1.054, z: -1.98}
-  m_LocalScale: {x: 5, y: 0.049999997, z: 0.77}
+  m_LocalPosition: {x: -3.39, y: 1, z: -1.98}
+  m_LocalScale: {x: 5, y: 0.5, z: 0.77}
   m_Children: []
   m_Father: {fileID: 4349109872348094}
   m_RootOrder: 3
@@ -394,7 +394,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1144346574620024}
   m_Material: {fileID: 13400000, guid: 4a7d68289231dac41a7883a788c00bb4, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -418,7 +418,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1022723377458770}
   m_Material: {fileID: 13400000, guid: 4a7d68289231dac41a7883a788c00bb4, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -434,8 +434,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413cc5db32cd2aa4b9604f9f6061145e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterPrefab: {fileID: 1918100532213140, guid: 5af1c8e083912b745a962ab96f82d179,
-    type: 2}
+  letterPrefabs:
+  - {fileID: 1918100532213140, guid: 5af1c8e083912b745a962ab96f82d179, type: 2}
+  - {fileID: 1059616245648854, guid: 0376e7a481f15b640861a3d2068799dc, type: 2}
+  - {fileID: 1416319276694920, guid: 29e40f18145077f42ae2153f98a5b91d, type: 2}
+  - {fileID: 1931373069095090, guid: c30e6717a60961b409cb0ee84bd4b259, type: 2}
   letterSpawn: {fileID: 4515183824361532}
   _randomNess: 2
 --- !u!114 &114462300308947242
@@ -449,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493e75ceda30e164f9db15cc6b8f0b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConstantSpeed: 2
+  ConstantSpeed: 0.5
 --- !u!114 &114832929090129712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -461,4 +464,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493e75ceda30e164f9db15cc6b8f0b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConstantSpeed: 2
+  ConstantSpeed: 0.5

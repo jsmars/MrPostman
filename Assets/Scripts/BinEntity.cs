@@ -28,6 +28,11 @@ public class BinEntity : MonoBehaviour {
 
     }
 
+    public void OnDestroy()
+    {
+        Events.instance.RemoveListener<GameOverEvent>(StopCollecting);
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (!_gameOver && !HasCollected(other))
