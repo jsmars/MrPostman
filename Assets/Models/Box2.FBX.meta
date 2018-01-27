@@ -1,26 +1,32 @@
 fileFormatVersion: 2
-guid: 71acec8737b61d3448385fd4089b5d72
-timeCreated: 1517008657
+guid: 1effc195795e3614a8b82a7a4bca24bf
+timeCreated: 1517012244
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Box001
     100002: //RootNode
-    100004: Stamp
+    100004: Line001
+    100006: Stamp
+    100008: Line002
     400000: Box001
     400002: //RootNode
-    400004: Stamp
+    400004: Line001
+    400006: Stamp
+    400008: Line002
     2100000: 01 - Default
-    2100002: 'Material #36'
-    2100004: LetterMaterial
-    2100006: StampMaterial
+    2100002: StampMaterial
+    2100004: 02 - Default
     2300000: Box001
     2300002: Stamp
+    2300004: Line001
     3300000: Box001
     3300002: Stamp
+    3300004: Line001
     4300000: Box001
     4300002: Stamp
+    4300004: Line001
     9500000: //RootNode
   externalObjects: {}
   materials:
