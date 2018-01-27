@@ -8,7 +8,7 @@ public class ConveyorSubjectBehavior : MonoBehaviour
     private Vector3 _currentVelocity = Vector3.zero;
     private Rigidbody _rigidBody;
 
-    public int ConstantSpeed;
+    public float ConstantSpeed;
 
     // Use this for initialization
     void Start()
