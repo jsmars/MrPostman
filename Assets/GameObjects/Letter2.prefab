@@ -233,6 +233,7 @@ MonoBehaviour:
   Score: 1
   LetterColor: 0
   LetterNumber: 0
+  LetterType: 1
 --- !u!114 &114859595570909818
 MonoBehaviour:
   m_ObjectHideFlags: 1

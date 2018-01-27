@@ -4,12 +4,15 @@ using UnityEngine;
 using VRTK;
 using VRTK.GrabAttachMechanics;
 using VRTK.SecondaryControllerGrabActions;
+using Assets.Scripts.Enums;
 
 public class LetterEntity : MonoBehaviour {
 	public List<GameObject> Models;
 	public int Score;
     public LetterColor LetterColor;
     public int LetterNumber;
+    public LetterTypeEnum LetterType;
+
 
     public bool Used { get; private set; }
 

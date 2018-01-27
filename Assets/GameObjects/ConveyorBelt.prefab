@@ -740,7 +740,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 490e9abc3531b0442b0524dcb8518713, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.702
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -820,13 +820,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413cc5db32cd2aa4b9604f9f6061145e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterPrefabs:
+  LetterPrefabs:
   - {fileID: 1918100532213140, guid: 5af1c8e083912b745a962ab96f82d179, type: 2}
   - {fileID: 1059616245648854, guid: 0376e7a481f15b640861a3d2068799dc, type: 2}
   - {fileID: 1416319276694920, guid: 29e40f18145077f42ae2153f98a5b91d, type: 2}
   - {fileID: 1931373069095090, guid: c30e6717a60961b409cb0ee84bd4b259, type: 2}
-  letterSpawn: {fileID: 4515183824361532}
-  _randomNess: 2
+  LetterSpawn: {fileID: 4515183824361532}
+  WaveLengthConstant: 10
+  WavePauseTimer: 20
+  Randomness: 1
 --- !u!114 &114462300308947242
 MonoBehaviour:
   m_ObjectHideFlags: 1
