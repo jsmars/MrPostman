@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Models: []
-  Score: 1
+  Score: 2
   LetterColor: 0
   LetterNumber: 0
   Weight: 0

@@ -96,6 +96,13 @@ public class ConveyorBehavior : MonoBehaviour {
         {
             case 0:
                 waveTypes.Add(LetterTypeEnum.LetterSmall, 10);
+                //Uncomment to test all types equially
+                //waveTypes.Add(LetterTypeEnum.Illegal, 10);
+                //waveTypes.Add(LetterTypeEnum.LetterBig, 10);
+                //waveTypes.Add(LetterTypeEnum.Numbered, 10);
+                //waveTypes.Add(LetterTypeEnum.PackageBig, 10);
+                //waveTypes.Add(LetterTypeEnum.PackageSmall, 10);
+                //waveTypes.Add(LetterTypeEnum.Stamped, 10);
                 waveSpawnsTotal = waveSpawnsLeft = 10;
                 break;
             case 1:

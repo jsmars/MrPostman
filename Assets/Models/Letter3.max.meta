@@ -8,18 +8,33 @@ ModelImporter:
     100000: Letter
     100002: //RootNode
     100004: Stamp
+    100006: Plane001
+    100008: Plane002
+    100010: Sky001
     400000: Letter
     400002: //RootNode
     400004: Stamp
+    400006: Plane001
+    400008: Plane002
+    400010: Sky001
     2100000: 01 - Default
     2100002: StampMaterial
+    2100004: No Name
+    2100006: 07 - Default
     2300000: Letter
     2300002: Stamp
+    2300004: Plane001
+    2300006: Plane002
     3300000: Letter
     3300002: Stamp
+    3300004: Plane001
+    3300006: Plane002
     4300000: Letter
     4300002: Stamp
+    4300004: Plane001
+    4300006: Plane002
     9500000: //RootNode
+    10800000: Sky001
   externalObjects: {}
   materials:
     importMaterials: 1

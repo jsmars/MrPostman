@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Models: []
-  Score: 2
+  Score: 4
   LetterColor: 0
   LetterNumber: 0
   Weight: 4.8
