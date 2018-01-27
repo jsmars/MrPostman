@@ -72,6 +72,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4786295768752636}
+  - component: {fileID: 65277587985955794}
   m_Layer: 0
   m_Name: LetterSpawn
   m_TagString: Untagged
@@ -220,7 +221,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829958361601598}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -3.454, y: 1.054, z: -1.98}
+  m_LocalPosition: {x: -3.39, y: 1.054, z: -1.98}
   m_LocalScale: {x: 5, y: 0.049999997, z: 0.77}
   m_Children: []
   m_Father: {fileID: 4041716820900094}
@@ -272,8 +273,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128940898532800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.71, y: 1, z: -0.076}
-  m_LocalScale: {x: 5.5, y: 0.05, z: 1}
+  m_LocalPosition: {x: -0.54, y: 1, z: 0}
+  m_LocalScale: {x: 5.2, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 4041716820900094}
   m_RootOrder: 2
@@ -551,6 +552,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65277587985955794
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1237355646952112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.69956446, y: 0.5528836, z: 0.64937484}
+  m_Center: {x: -0.15021777, y: 0.22355819, z: -0.018751085}
 --- !u!65 &65297482237075250
 BoxCollider:
   m_ObjectHideFlags: 1
