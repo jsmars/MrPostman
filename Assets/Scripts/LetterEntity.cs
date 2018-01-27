@@ -5,9 +5,7 @@ using VRTK;
 using VRTK.GrabAttachMechanics;
 using VRTK.SecondaryControllerGrabActions;
 
-public enum LetterColor { Red, Blue, Yellow }
-
-public class MakeLetter : MonoBehaviour {
+public class LetterEntity : MonoBehaviour {
 	public List<GameObject> Models;
 	public int Score;
     public LetterColor LetterColor;
@@ -17,9 +15,9 @@ public class MakeLetter : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
 
 
+        Helpers.SetStampColor(gameObject, LetterColor);
     }
 	
 	// Update is called once per frame
@@ -27,7 +25,7 @@ public class MakeLetter : MonoBehaviour {
 		
 	}
 
-    public bool TryScore(BinCollected bin)
+    public bool TryScore(BinEntity bin)
     {
         if (Used)
             return false;

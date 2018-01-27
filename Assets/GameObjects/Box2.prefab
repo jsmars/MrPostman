@@ -90,10 +90,10 @@ GameObject:
   - component: {fileID: 114496000704456120}
   - component: {fileID: 65927192940010536}
   - component: {fileID: 54962852441153270}
-  - component: {fileID: 114094012112069486}
+  - component: {fileID: 114977062054278278}
   m_Layer: 0
   m_Name: Box2
-  m_TagString: ConveyorSubject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,21 +317,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.468862, y: 0.12604558, z: 0.31158355}
   m_Center: {x: 0.0012413859, y: 0.057820022, z: 0.0005687326}
---- !u!114 &114094012112069486
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1931373069095090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a344360abaab4b4891d64f8eb660e02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Models: []
-  Score: 1
-  LetterColor: 0
-  LetterNumber: 0
 --- !u!114 &114496000704456120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -394,3 +379,18 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
+--- !u!114 &114977062054278278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1931373069095090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a344360abaab4b4891d64f8eb660e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Models: []
+  Score: 0
+  LetterColor: 0
+  LetterNumber: 0
