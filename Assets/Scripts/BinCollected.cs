@@ -5,25 +5,35 @@ public class BinCollected : MonoBehaviour
 {
 	public ParticleSystem Particles;
 	private readonly HashSet<GameObject> _binCollected = new HashSet<GameObject>();
+    public LetterColor LetterColor;
+    public int LetterNumber;
 
-	public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
 	{
-		if(IsLetter(other) && !HasCollected(other))
+		if(!HasCollected(other))
 		{
-			//Destroy(other.gameObject);
-			Events.instance.Raise(new ScoreEvent(10));
-			Particles.Play();
-			_binCollected.Add(other.gameObject);
+            var letter = TryGetLetter(other);
+            if (letter != null && letter.TryScore(this))
+            {
+                //Destroy(other.gameObject);
+                Particles.Play();
+                _binCollected.Add(other.gameObject);
+            }
 		}
 	}
 
-	private static bool IsLetter(Collider other)
+	private static MakeLetter TryGetLetter(Collider other)
 	{
-		return other.gameObject.name.Contains("Letter");
+        return other.gameObject.GetComponent<MakeLetter>();
 	}
 
 	private bool HasCollected(Collider other)
 	{
 		return _binCollected.Contains(other.gameObject);
-	}
+    }
+
+    public override string ToString()
+    {
+        return "BIN " + LetterColor + " / " + LetterNumber;
+    }
 }
