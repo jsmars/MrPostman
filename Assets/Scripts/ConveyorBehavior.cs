@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using Random = UnityEngine.Random;
 
 public class ConveyorBehavior : MonoBehaviour {
 
@@ -67,7 +69,7 @@ public class ConveyorBehavior : MonoBehaviour {
 
         var newObj = Instantiate(type.GameObj, spawnPosition, spawnRotation);
         var newLetter = newObj.GetComponent<LetterEntity>();
-        newLetter.LetterColor = LetterColor.Blue;
+	    newLetter.LetterColor = (LetterColor)Random.Range(0, Helpers.LetterColorCount);
     }
     
     private Vector3 GetRandomPointInSpawnArea()

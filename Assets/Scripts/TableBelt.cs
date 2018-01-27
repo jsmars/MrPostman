@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TableBelt : MonoBehaviour
 {
@@ -21,7 +18,7 @@ public class TableBelt : MonoBehaviour
 
     private ConveyorSubjectBehavior SetupCollisionObject(Collider collider) 
     {
-        var isConveyorSubject = collider.GetComponent<LetterEntity>() != null;
+        var isConveyorSubject = collider.gameObject.GetComponent<LetterEntity>() != null;
         if (!isConveyorSubject)
         {
             return null;
@@ -37,7 +34,7 @@ public class TableBelt : MonoBehaviour
         return conveyorSubjectScript;
     }
 
-    void OnTriggerEnter(Collider collider)
+    public void OnTriggerEnter(Collider collider)
     {
         var conveyorSubjectScript = SetupCollisionObject(collider);
         if (conveyorSubjectScript != null)
