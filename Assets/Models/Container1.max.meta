@@ -9,18 +9,23 @@ ModelImporter:
     100002: Container1
     100004: Sky001
     100006: COLLISION
+    100008: Stamp
     400000: //RootNode
     400002: Container1
     400004: Sky001
     400006: COLLISION
+    400008: Stamp
     2100000: 01 - Default
     2100002: 02 - Default
     2300000: Container1
     2300002: COLLISION
+    2300004: Stamp
     3300000: Container1
     3300002: COLLISION
+    3300004: Stamp
     4300000: Container1
     4300002: COLLISION
+    4300004: Stamp
     9500000: //RootNode
     10800000: Sky001
   externalObjects: {}
