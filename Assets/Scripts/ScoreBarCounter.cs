@@ -9,7 +9,12 @@ public class ScoreBarCounter : MonoBehaviour
 
 	public void Start()
 	{
-		Events.instance.AddListener<ScoreEvent>(e => ChangeBar(LetterIncrease));
+		Events.instance.AddListener<ScoreEvent>(ChangeBar);
+	}
+
+	public void OnDestroy()
+	{
+		Events.instance.RemoveListener<ScoreEvent>(ChangeBar);
 	}
 
 	public void Update()
@@ -20,6 +25,11 @@ public class ScoreBarCounter : MonoBehaviour
 		{
 			Events.instance.Raise(new GameOverEvent());
 		}
+	}
+
+	private void ChangeBar(ScoreEvent scoreEvent)
+	{
+		ChangeBar(LetterIncrease);
 	}
 
 	private void ChangeBar(float change)

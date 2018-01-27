@@ -10,12 +10,17 @@ public class ScoreCounter : MonoBehaviour
 	{
 		_textComponent = GetComponent<Text>();
 		_textComponent.text = "0";
-		Events.instance.AddListener<ScoreEvent>(e => ChangeScore(e.Points));
+		Events.instance.AddListener<ScoreEvent>(ChangeScore);
 	}
 
-	private void ChangeScore(float points)
+	public void OnDestroy()
 	{
-		_score += points;
+		Events.instance.RemoveListener<ScoreEvent>(ChangeScore);
+	}
+
+	private void ChangeScore(ScoreEvent scoreEvent)
+	{
+		_score += scoreEvent.Points;
 		_textComponent.text = _score.ToString();
 	}
 }
