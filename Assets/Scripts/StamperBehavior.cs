@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StamperBedhavior : MonoBehaviour {
-
-
+public class StamperBehavior : MonoBehaviour
+{
     public GameObject StamperStamp;
 
 	// Use this for initialization
-	void Start () {
+    void Start()
+    {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+    void Update()
+    {
 		
 	}
 
