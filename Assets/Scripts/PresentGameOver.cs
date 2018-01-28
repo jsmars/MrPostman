@@ -3,6 +3,7 @@
 public class PresentGameOver : MonoBehaviour
 {
 	public GameObject GameOverText;
+    public AudioSource GameOverSound;
 
 	public void Start()
 	{
@@ -17,5 +18,6 @@ public class PresentGameOver : MonoBehaviour
 	private void ActivateGameOver(GameOverEvent e)
 	{
 		GameOverText.SetActive(true);
+        GameOverSound.Play();
 	}
 }
