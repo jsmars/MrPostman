@@ -156,7 +156,12 @@ public class ConveyorBehavior : MonoBehaviour {
                 waveTypes.Add(LetterTypeEnum.Numbered, 2);
                 waveSpawnsTotal = waveSpawnsLeft = 15;
                 break;
+
+            default:
+                waveSpawnsTotal = waveSpawnsLeft = 10 + _currentWave;
+                break;
         }
+
     }
 
     List<LetterObj> temp = new List<LetterObj>();
