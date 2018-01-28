@@ -112,7 +112,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4167788519573160
 Transform:
@@ -329,8 +329,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 8d88cdccca22f3f4c834192724cb4692, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Particles: {fileID: 198893120838004258}
   CollectSound: {fileID: 82453573746464166}
-  FailSound: {fileID: 0}
+  FailSound: {fileID: 82286749136499388}
   LetterColor: 0
   LetterType: 1
   WeightLimit: 5

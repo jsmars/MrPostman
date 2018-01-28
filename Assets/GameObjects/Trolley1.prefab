@@ -95,7 +95,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4057924605155664
 Transform:
@@ -386,8 +386,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Particles: {fileID: 198066289219432812}
   CollectSound: {fileID: 82517953491005766}
+  FailSound: {fileID: 0}
   LetterColor: 0
+  LetterType: 0
+  WeightLimit: 0
+  WeightLimitGreater: 0
   LetterNumber: 0
+  BoxIndexX: 0
+  BoxIndexY: 0
 --- !u!198 &198066289219432812
 ParticleSystem:
   m_ObjectHideFlags: 1
