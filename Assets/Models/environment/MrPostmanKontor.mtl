@@ -1,5 +1,5 @@
 # Revit Wavefront OBJ Exporter 2.9.5 - (c) 2017 www.inglegreen.com
-# File Created: 2018-01-28 12:08:54
+# File Created: 2018-01-28 12:14:55
 
 newmtl cwLightGrey
 Ka 0.0000 0.0000 0.0000
@@ -9,11 +9,6 @@ d 1.00
 newmtl Default_Wall
 Ka 0.0000 0.0000 0.0000
 Kd 0.501960784313725 0.501960784313725 0.501960784313725 1.0
-d 1.00
-
-newmtl Default material
-Ka 0.0000 0.0000 0.0000
-Kd 0.588235294117647 0.588235294117647 0.588235294117647 1.0
 d 1.00
 
 newmtl Takpapp
@@ -181,8 +176,3 @@ Kd 0.650980392156863 0.525490196078431 0.466666666666667 1.0
 d 1.00
 map_Kd textures\
 map_bump %%
-
-newmtl Concrete_Cast_In_Situ
-Ka 0.0000 0.0000 0.0000
-Kd 0.752941176470588 0.752941176470588 0.752941176470588 1.0
-d 1.00
