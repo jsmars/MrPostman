@@ -6,17 +6,17 @@ public class StamperBehavior : MonoBehaviour
 {
     public GameObject StamperStamp;
 
-    // Use this for initialization
+	// Use this for initialization
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
+		
+	}
+	
+	// Update is called once per frame
     void Update()
     {
-
-    }
+		
+	}
 
     void OnTriggerEnter(Collider collider)
     {
@@ -25,10 +25,10 @@ public class StamperBehavior : MonoBehaviour
         {
             return;
         }
-
+                    
         var newStamperStamp = Instantiate(StamperStamp, collider.transform);
         newStamperStamp.transform.position = this.transform.position;
         newStamperStamp.transform.rotation = this.transform.rotation;
-
+        letterEntity.IsStamped = true;
     }
 }

@@ -64,7 +64,7 @@ public class ConveyorBehavior : MonoBehaviour {
                 else
                     obj = Instantiate(baseBox, baseBox.transform.position + new Vector3((xTot / (xCount - 1)) * x, (yTot / (yCount - 1)) * y, 0), baseBox.transform.rotation);
                 var entity = baseBox.GetComponent<BinEntity>();
-                var boxNum = Random.Range(1000, 9999);
+                var boxNum = Random.Range(10, 99);
                 entity.LetterNumber = boxNum;
                 entity.transform.GetComponent<TextMesh>().text = boxNum.ToString();
                 validPostNumbers.Add(boxNum);
@@ -122,32 +122,39 @@ public class ConveyorBehavior : MonoBehaviour {
         switch (_currentWave)
         {
             case 0:
-                //waveTypes.Add(LetterTypeEnum.Letter, 10);
-                //Uncomment to test all types equially
-                //waveTypes.Add(LetterTypeEnum.Illegal, 10);
-                //waveTypes.Add(LetterTypeEnum.LetterBig, 10);
-                waveTypes.Add(LetterTypeEnum.Numbered, 10);
-                //waveTypes.Add(LetterTypeEnum.PackageBig, 10);
-                //waveTypes.Add(LetterTypeEnum.PackageSmall, 10);
-                //waveTypes.Add(LetterTypeEnum.Stamped, 10);
+                waveTypes.Add(LetterTypeEnum.Letter, 10);
                 waveSpawnsTotal = waveSpawnsLeft = 10;
                 break;
             case 1:
-                waveTypes.Add(LetterTypeEnum.Package, 5);
-                waveTypes.Add(LetterTypeEnum.Illegal, 2);
-                waveSpawnsTotal = waveSpawnsLeft = 15;
+                waveTypes.Clear();
+                waveTypes.Add(LetterTypeEnum.Package, 10);
+                waveSpawnsTotal = waveSpawnsLeft = 10;
                 break;
             case 2:
-                waveTypes.Add(LetterTypeEnum.Numbered, 3);
+                waveTypes.Clear();
+                waveTypes.Add(LetterTypeEnum.Illegal, 10);
                 waveSpawnsTotal = waveSpawnsLeft = 15;
                 break;
             case 3:
-                waveTypes.Add(LetterTypeEnum.Numbered, 2);
-                waveSpawnsTotal = waveSpawnsLeft = 20;
-                break;
-            case 4:
+                waveTypes.Clear();
                 waveTypes.Add(LetterTypeEnum.Stamped, 1);
-                waveSpawnsTotal = waveSpawnsLeft = 20;
+                waveSpawnsTotal = waveSpawnsLeft = 5;
+                break;
+
+            case 4:
+                waveTypes.Clear();
+                waveTypes.Add(LetterTypeEnum.Numbered, 2);
+                waveSpawnsTotal = waveSpawnsLeft = 3;
+                break;
+
+            case 5:
+                waveTypes.Clear();
+                waveTypes.Add(LetterTypeEnum.Letter, 10);
+                waveTypes.Add(LetterTypeEnum.Package, 10);
+                waveTypes.Add(LetterTypeEnum.Illegal, 10);
+                waveTypes.Add(LetterTypeEnum.Stamped, 1);
+                waveTypes.Add(LetterTypeEnum.Numbered, 2);
+                waveSpawnsTotal = waveSpawnsLeft = 15;
                 break;
         }
     }
