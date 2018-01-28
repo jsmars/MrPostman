@@ -386,7 +386,12 @@ MonoBehaviour:
   CollectSound: {fileID: 82453573746464166, guid: 1e708709aa8f77b43b30b9ca5b56032b,
     type: 2}
   LetterColor: 0
+  LetterType: 4
+  WeightLimit: 0
+  WeightLimitGreater: 0
   LetterNumber: 0
+  BoxIndexX: 0
+  BoxIndexY: 0
 --- !u!198 &198792729719723174
 ParticleSystem:
   m_ObjectHideFlags: 1

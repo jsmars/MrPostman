@@ -378,7 +378,8 @@ MonoBehaviour:
   LetterNumber: 0
   Weight: 0
   NeedsVAT: 0
-  LetterType: 4
+  IsStamped: 0
+  LetterType: 2
 --- !u!114 &114251921943934454
 MonoBehaviour:
   m_ObjectHideFlags: 1

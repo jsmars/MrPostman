@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Enums;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,12 @@ public class BinEntity : MonoBehaviour {
     private readonly HashSet<GameObject> _binCollected = new HashSet<GameObject>();
     //public GameObject StampMaterial;
     public LetterColor LetterColor;
+    public LetterTypeEnum LetterType;
+    public int WeightLimit;
+    public bool WeightLimitGreater;
     public int LetterNumber;
+    public int BoxIndexX;
+    public int BoxIndexY;
     private bool _gameOver;
 
     Collider letterCollider;

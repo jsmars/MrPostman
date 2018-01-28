@@ -23,6 +23,7 @@ public class ConveyorBehavior : MonoBehaviour {
     private int waveSpawnsLeft;
     private int waveSpawnsTotal;
     Helpers.WeightedList<LetterTypeEnum> waveTypes = new Helpers.WeightedList<LetterTypeEnum>();
+    List<int> validPostNumbers = new List<int>();
 
     public void Start ()
 	{
@@ -44,7 +45,32 @@ public class ConveyorBehavior : MonoBehaviour {
         }
 
         SetupCurrentWave();
-	}
+
+        // Spawn BoxNumberBins
+        var baseBox = GameObject.Find("BoxNumberBinFIRST");
+        var xTot = -1.76f;
+        var yTot = 1.69f - 2.45f;
+        var xCount = 9;
+        var yCount = 4;
+
+        for (int y = 0; y < yCount; y++)
+        {
+            for (int x = 0; x < xCount; x++)
+            {
+                GameObject obj;
+                if (x == 0 && y == 0)
+                    obj = baseBox;
+                else
+                    obj = Instantiate(baseBox, baseBox.transform.position + new Vector3((xTot / (xCount - 1)) * x, (yTot / (yCount - 1)) * y, 0), baseBox.transform.rotation);
+                var entity = baseBox.GetComponent<BinEntity>();
+                var boxNum = Random.Range(1000, 9999);
+                entity.LetterNumber = boxNum;
+                entity.transform.GetComponent<TextMesh>().text = boxNum.ToString();
+                validPostNumbers.Add(boxNum);
+            }
+        }
+
+    }
 
 	public void OnDestroy()
 	{
@@ -95,52 +121,50 @@ public class ConveyorBehavior : MonoBehaviour {
         switch (_currentWave)
         {
             case 0:
-                waveTypes.Add(LetterTypeEnum.LetterSmall, 10);
+                //waveTypes.Add(LetterTypeEnum.Letter, 10);
                 //Uncomment to test all types equially
                 //waveTypes.Add(LetterTypeEnum.Illegal, 10);
                 //waveTypes.Add(LetterTypeEnum.LetterBig, 10);
-                //waveTypes.Add(LetterTypeEnum.Numbered, 10);
+                waveTypes.Add(LetterTypeEnum.Numbered, 10);
                 //waveTypes.Add(LetterTypeEnum.PackageBig, 10);
                 //waveTypes.Add(LetterTypeEnum.PackageSmall, 10);
                 //waveTypes.Add(LetterTypeEnum.Stamped, 10);
                 waveSpawnsTotal = waveSpawnsLeft = 10;
                 break;
             case 1:
-                waveTypes.Add(LetterTypeEnum.LetterBig, 5);
-                waveSpawnsTotal = waveSpawnsLeft = 10;
-                break;
-            case 2:
-                waveTypes.Add(LetterTypeEnum.PackageSmall, 5);
+                waveTypes.Add(LetterTypeEnum.Package, 5);
                 waveTypes.Add(LetterTypeEnum.Illegal, 2);
                 waveSpawnsTotal = waveSpawnsLeft = 15;
                 break;
-            case 3:
-                waveTypes.Add(LetterTypeEnum.PackageBig, 5);
+            case 2:
                 waveTypes.Add(LetterTypeEnum.Numbered, 3);
                 waveSpawnsTotal = waveSpawnsLeft = 15;
                 break;
-            case 4:
+            case 3:
                 waveTypes.Add(LetterTypeEnum.Numbered, 2);
                 waveSpawnsTotal = waveSpawnsLeft = 20;
                 break;
-            case 5:
+            case 4:
                 waveTypes.Add(LetterTypeEnum.Stamped, 1);
                 waveSpawnsTotal = waveSpawnsLeft = 20;
                 break;
         }
-
     }
 
-    private static bool AnyOf(LetterObj x)
-    {
-        return x.Script.LetterType == LetterTypeEnum.LetterSmall || x.Script.LetterType == LetterTypeEnum.LetterBig;
-    }
-
+    List<LetterObj> temp = new List<LetterObj>();
     private LetterObj GetObjFromType(LetterTypeEnum type)
     {
+        // Save all of this type to a temp list
+        temp.Clear();
         foreach (var item in LetterObjects)
             if (item.Value.Script.LetterType == type)
-                return item.Value;
+                temp.Add(item.Value);
+
+        // randomize from that list
+        if (temp.Count > 0)
+            return temp[Random.Range(0, temp.Count)];
+
+        // it doesnt exist
         return null;
     }
     
@@ -159,7 +183,24 @@ public class ConveyorBehavior : MonoBehaviour {
         {
             var newObj = Instantiate(type.GameObj, spawnPosition, spawnRotation);
             var newLetter = newObj.GetComponent<LetterEntity>();
-            newLetter.LetterColor = (LetterColor)Random.Range(0, Helpers.LetterColorCount);
+
+            switch (newLetter.LetterType)
+            {
+                case LetterTypeEnum.Letter:
+                    newLetter.LetterColor = (LetterColor)Random.Range(0, Helpers.LetterColorCount);
+                    break;
+
+                case LetterTypeEnum.Package:
+                    newLetter.Weight = Random.Range(1, 10);
+                    break;
+
+                case LetterTypeEnum.Numbered:
+                    var num = validPostNumbers[Random.Range(0, validPostNumbers.Count)];
+                    newLetter.LetterNumber = num;
+                    newLetter.transform.GetChild(0).GetComponent<TextMesh>().text = num.ToString();
+                    break;
+            }
+
         }
     }
     

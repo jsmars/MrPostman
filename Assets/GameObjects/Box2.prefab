@@ -424,4 +424,5 @@ MonoBehaviour:
   LetterNumber: 0
   Weight: 4.8
   NeedsVAT: 0
-  LetterType: 2
+  IsStamped: 0
+  LetterType: 1

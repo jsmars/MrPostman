@@ -24,15 +24,17 @@ public static class Helpers
 	public static void SetStampColor(GameObject obj, LetterColor color)
 	{
 		var stamp = obj.transform.Find("Stamp");
-		if (stamp == null)
-			Debug.LogError(obj + " is missing Stamp");
-		else
+		if (stamp != null)
 		{
 			var stampMat = stamp.GetComponent<Renderer>();
-			if (stampMat == null)
-				Debug.LogError(obj + " is missing StampMaterial");
-			else
-				stampMat.material.color = Helpers.FromLetterColor(color);
+            if (stampMat != null)
+            {
+                var letter = obj.GetComponent<LetterEntity>();
+                if (letter == null || letter.LetterType == Assets.Scripts.Enums.LetterTypeEnum.Letter) // no letter means this is a bin
+                    stampMat.material.color = Helpers.FromLetterColor(color);
+                else
+                    stampMat.material.color = Color.white;
+            }
 		}
 	}
 
