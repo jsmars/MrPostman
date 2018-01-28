@@ -22,7 +22,7 @@ public class ScoreBarCounter : MonoBehaviour
 	{
         var waveIncr = 1 + ConveyorBehavior.CurrentWave / 25f;
         var decrSpeed = -Decrease * waveIncr;
-        Debug.Log("Decrease speed: " + decrSpeed);
+        //Debug.Log("Decrease speed: " + decrSpeed);
 
         ChangeBar(decrSpeed * Time.deltaTime);
 
