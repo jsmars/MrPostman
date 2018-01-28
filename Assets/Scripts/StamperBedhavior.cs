@@ -28,6 +28,6 @@ public class StamperBedhavior : MonoBehaviour {
         var newStamperStamp = Instantiate(StamperStamp, collider.transform);
         newStamperStamp.transform.position = this.transform.position;
         newStamperStamp.transform.rotation = this.transform.rotation;
-               
+        letterEntity.IsStamped = true;
     }
 }
