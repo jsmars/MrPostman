@@ -1,9 +1,9 @@
 # Revit Wavefront OBJ Exporter 2.9.5 - (c) 2017 www.inglegreen.com
-# File Created: 2018-01-28 14:01:35
+# File Created: 2018-01-28 15:56:43
 
 newmtl cwLightGrey
 Ka 0.0000 0.0000 0.0000
-Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+Kd 0.850980392156863 0.850980392156863 0.850980392156863 1.0
 d 1.00
 
 newmtl Default_Wall
@@ -15,32 +15,26 @@ newmtl Takpapp
 Ka 0.0000 0.0000 0.0000
 Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
 d 1.00
-map_Kd textures\
+map_Kd Textures\
 map_bump %%
 
 newmtl Undertak_-_vit
 Ka 0.0000 0.0000 0.0000
 Kd 1 1 1 1.0
 d 1.00
-map_Kd textures\
+map_Kd Textures\
 map_bump %%
 
-newmtl cwDarkGrey
+newmtl cwTan
 Ka 0.0000 0.0000 0.0000
-Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+Kd 0.67843137254902 0.682352941176471 0.584313725490196 1.0
 d 1.00
 
-newmtl cwGreen
-Ka 0.0000 0.0000 0.0000
-Kd 0.141176470588235 0.635294117647059 0.180392156862745 1.0
-d 1.00
-
-newmtl Foder_vit
+newmtl Smyg_inv_vit
 Ka 0.0000 0.0000 0.0000
 Kd 1 1 1 1.0
 d 1.00
-map_Kd textures\
-map_bump %%
+map_Kd Textures\whitegif.png
 
 newmtl Glass
 Ka 0.0000 0.0000 0.0000
@@ -54,7 +48,7 @@ d 1.00
 
 newmtl cwBlue
 Ka 0.0000 0.0000 0.0000
-Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+Kd 0.615686274509804 0.694117647058824 0.968627450980392 1.0
 d 1.00
 
 newmtl Insulation_-_CornellIron_-_Plastic_Smooth_Ash
@@ -86,7 +80,7 @@ newmtl Treppe_-_Holz
 Ka 0.0000 0.0000 0.0000
 Kd 0.862745098039216 0.654901960784314 0.392156862745098 1.0
 d 1.00
-map_Kd textures\Woods & Plastics.Finish Carpentry.Wood.Red Birch.png
+map_Kd Textures\Woods & Plastics.Finish Carpentry.Wood.Red Birch.png
 
 newmtl Metal_Paint_Finish_White_Matte
 Ka 0.0000 0.0000 0.0000
@@ -152,13 +146,8 @@ newmtl Tow_Motor_-_Seat
 Ka 0.0000 0.0000 0.0000
 Kd 0.388235294117647 0.407843137254902 0.392156862745098 1.0
 d 1.00
-map_Kd textures\Furnishings.Fabrics.Leather.Black.png
+map_Kd Textures\Furnishings.Fabrics.Leather.Black.png
 map_bump textures\Furnishings.Fabrics.Leather.Black.png
-
-newmtl cwTan
-Ka 0.0000 0.0000 0.0000
-Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
-d 1.00
 
 newmtl Stainless_Steel_-_Salsbury_Finish_-_Polished
 Ka 0.0000 0.0000 0.0000
@@ -167,22 +156,27 @@ d 1.00
 
 newmtl cwBrown
 Ka 0.0000 0.0000 0.0000
-Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+Kd 0.623529411764706 0.482352941176471 0.243137254901961 1.0
 d 1.00
 
 newmtl Label_-_Sigma
 Ka 0.0000 0.0000 0.0000
 Kd 0.650980392156863 0.525490196078431 0.466666666666667 1.0
 d 1.00
-map_Kd textures\
+map_Kd Textures\
 map_bump %%
 
 newmtl cwScreen
 Ka 0.0000 0.0000 0.0000
-Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+Kd 0.941176470588235 0.968627450980392 0.992156862745098 1.0
 d 1.00
 
 newmtl Steel_Carbon
 Ka 0.0000 0.0000 0.0000
 Kd 0 0 0 1.0
+d 1.00
+
+newmtl Default material
+Ka 0.0000 0.0000 0.0000
+Kd 0.588235294117647 0.588235294117647 0.588235294117647 1.0
 d 1.00
