@@ -347,7 +347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f80b75882dd91c4f93c15b18161df0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeTimeSecs: 15
 --- !u!114 &114496000704456120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -427,4 +426,4 @@ MonoBehaviour:
   NeedsVAT: 0
   IsStamped: 0
   LetterType: 1
-  GrabLetterAudio: {fileID: 8300000, guid: b6f6adc3959fda644ad1cdfef70397cb, type: 3}
+  GrabLetterAudio: {fileID: 8300000, guid: 67595bc1056bf7d4eac06c4c3bb7e0bc, type: 3}
