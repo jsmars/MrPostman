@@ -7,6 +7,7 @@ public class BinEntity : MonoBehaviour {
 
     public ParticleSystem Particles;
     public AudioSource CollectSound;
+    public AudioSource FailSound;
     private readonly HashSet<GameObject> _binCollected = new HashSet<GameObject>();
     //public GameObject StampMaterial;
     public LetterColor LetterColor;
@@ -49,8 +50,12 @@ public class BinEntity : MonoBehaviour {
             {
                 //Destroy(other.gameObject);
                 Particles.Play();
-				CollectSound.Play();
+                CollectSound.Play();
                 _binCollected.Add(other.gameObject);
+            }
+            else 
+            {
+                FailSound.Play();
             }
         }
     }
