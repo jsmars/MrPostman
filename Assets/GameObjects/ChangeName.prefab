@@ -35,7 +35,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4758499941220438}
   - component: {fileID: 33438434531783584}
-  - component: {fileID: 65397992917191628}
   - component: {fileID: 23754260684090848}
   m_Layer: 0
   m_Name: Cube
@@ -91,7 +90,7 @@ GameObject:
   - component: {fileID: 23745405202906932}
   - component: {fileID: 114415221690066042}
   - component: {fileID: 114514149056638396}
-  - component: {fileID: 114503078599315616}
+  - component: {fileID: 114476949379296478}
   m_Layer: 0
   m_Name: ButtonDown
   m_TagString: Untagged
@@ -121,7 +120,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676121979594302}
-  m_LocalRotation: {x: 0.50000113, y: 0.5000005, z: 0.49999973, w: 0.49999872}
+  m_LocalRotation: {x: 0.50000113, y: 0.5000005, z: 0.4999997, w: 0.49999875}
   m_LocalPosition: {x: 0.007999986, y: 0.20870003, z: -0.11560004}
   m_LocalScale: {x: 0.058204688, y: 0.089042, z: 0.11761976}
   m_Children: []
@@ -155,7 +154,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b43e5571a9fe23946bf3070cdfceb1b0, type: 2}
+  - {fileID: 2100000, guid: 33af27359b49eda48829e2c0bf1e12b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -223,18 +222,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1229857424579132}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65397992917191628
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1229857424579132}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114135555069587200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,7 +266,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
---- !u!114 &114503078599315616
+--- !u!114 &114476949379296478
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -287,11 +274,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1676121979594302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 350434d2d64bcbd489e0ec0b05f6fcc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5446f1aec5ef2b545b2736f960feec44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 123458, guid: cd4ff35fbdd2e344f9f46c1da44572da, type: 2}
-  dispenseLocation: {fileID: 0}
 --- !u!114 &114514149056638396
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/andreas_vr.unity
+    guid: df9136f34351be747affb64bf71931a1
+  - enabled: 1
+    path: Assets/set_name.unity
+    guid: 0d3fd67a47d51ef4d99edee3773248ac
