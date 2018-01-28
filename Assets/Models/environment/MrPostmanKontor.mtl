@@ -1,5 +1,5 @@
 # Revit Wavefront OBJ Exporter 2.9.5 - (c) 2017 www.inglegreen.com
-# File Created: 2018-01-28 14:42:45
+# File Created: 2018-01-28 14:01:35
 
 newmtl cwLightGrey
 Ka 0.0000 0.0000 0.0000
@@ -25,9 +25,14 @@ d 1.00
 map_Kd textures\
 map_bump %%
 
-newmtl cwTan
+newmtl cwDarkGrey
 Ka 0.0000 0.0000 0.0000
 Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+d 1.00
+
+newmtl cwGreen
+Ka 0.0000 0.0000 0.0000
+Kd 0.141176470588235 0.635294117647059 0.180392156862745 1.0
 d 1.00
 
 newmtl Foder_vit
@@ -150,6 +155,11 @@ d 1.00
 map_Kd textures\Furnishings.Fabrics.Leather.Black.png
 map_bump textures\Furnishings.Fabrics.Leather.Black.png
 
+newmtl cwTan
+Ka 0.0000 0.0000 0.0000
+Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+d 1.00
+
 newmtl Stainless_Steel_-_Salsbury_Finish_-_Polished
 Ka 0.0000 0.0000 0.0000
 Kd 0.686274509803922 0.686274509803922 0.686274509803922 1.0
@@ -175,9 +185,4 @@ d 1.00
 newmtl Steel_Carbon
 Ka 0.0000 0.0000 0.0000
 Kd 0 0 0 1.0
-d 1.00
-
-newmtl Default material
-Ka 0.0000 0.0000 0.0000
-Kd 0.588235294117647 0.588235294117647 0.588235294117647 1.0
 d 1.00

@@ -60,7 +60,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1521617188528328
 GameObject:
@@ -385,6 +385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Particles: {fileID: 198474338551069588}
   CollectSound: {fileID: 82776793506093914}
+  FailSound: {fileID: 0}
   LetterColor: 0
   LetterType: 2
   WeightLimit: 0
