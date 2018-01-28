@@ -5,7 +5,7 @@ namespace Assets.Scripts
 {
 	public class DelayDestroy : MonoBehaviour
 	{
-        public float LifeTimeSecs = 15;
+        float LifeTimeSecs = 30;
         float lifeLeft;
 
 		public void Start()

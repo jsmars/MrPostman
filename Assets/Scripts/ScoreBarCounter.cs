@@ -3,7 +3,7 @@
 public class ScoreBarCounter : MonoBehaviour
 {
 	public GameObject Bar;
-	public float Decrease;
+	public float Decrease = 0.02f;
 	private float _score = 1;
 	public float LetterIncrease = 0.1f;
 	private bool _gameOver;
@@ -20,7 +20,11 @@ public class ScoreBarCounter : MonoBehaviour
 
 	public void Update()
 	{
-		ChangeBar(-Decrease * Time.deltaTime);
+        var waveIncr = 1 + ConveyorBehavior.CurrentWave / 25f;
+        var decrSpeed = -Decrease * waveIncr;
+        Debug.Log("Decrease speed: " + decrSpeed);
+
+        ChangeBar(decrSpeed * Time.deltaTime);
 
 		if (_score <= 0 && !_gameOver)
 		{
