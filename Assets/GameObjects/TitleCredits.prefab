@@ -278,7 +278,8 @@ TextMesh:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1781668136124380}
   m_Text: "Jonathan Sm\xE5rs / jsmars.com / @jsmars\nAndreas Wilcox / svdvorak.github.io
-    / svdvorak.github.io\nErik Lenells / @lenellsarn\nErik Gille\nChristian Wiiand\n"
+    / svdvorak.github.io\nErik Lenells / @lenellsarn\nErik 'Tera42' Gille\nChristian
+    'MrDuckHunt' Wiiand\n"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
