@@ -17,6 +17,33 @@ ModelImporter:
     2100010: Door_-_Frame
     2100012: Door_-_Panel
     2100014: Regel_145_yttervgg_600cc
+    2100016: cwLightGrey
+    2100018: cwDarkGrey
+    2100020: cwBlue
+    2100022: Insulation_-_CornellIron_-_Plastic_Smooth_Ash
+    2100024: Metal_-_Galvanized_Steel_-_CornellIron_-_Stainless_Steel_Brushed_-_Curtain_Only
+    2100026: Metal_-_Steel_-_CornellIron_-_Steel_-_w_-_Powder_Coated_-_Rust_Inhibiting_Paint
+    2100028: Metal_-_Steel_-_CornellIron_-_Stainless_Steel_-_Double_Angle_w_Powder_Coat
+    2100030: Default
+    2100032: Vitmlad_gips_-_tak
+    2100034: Treppe_-_Holz
+    2100036: Metal_Paint_Finish_White_Matte
+    2100038: Copper
+    2100040: STEERING_WHEEL_2
+    2100042: STEERING_WHEEL
+    2100044: Tow_Motor_-_Roll_Cage
+    2100046: Tow_Motor_-_Yellow_2
+    2100048: Vehicles_-_Semi_-_Chrome
+    2100050: Vehicles_-_Semi_-_Tires
+    2100052: Tow_Motor_-_Yellow
+    2100054: Tow_Motor_-_Roll_Cage_Two
+    2100056: Tow_Motor_-_Tire
+    2100058: Tow_Motor_-_Red_Light
+    2100060: Tow_Motor_-_Seat
+    2100062: cwTan
+    2100064: Stainless_Steel_-_Salsbury_Finish_-_Polished
+    2100066: cwBrown
+    2100068: Label_-_Sigma
     2300000: default
     3300000: default
     4300000: default

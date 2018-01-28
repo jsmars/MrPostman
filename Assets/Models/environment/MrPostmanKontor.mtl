@@ -1,5 +1,5 @@
 # Revit Wavefront OBJ Exporter 2.9.5 - (c) 2017 www.inglegreen.com
-# File Created: 2018-01-28 12:14:55
+# File Created: 2018-01-28 14:01:35
 
 newmtl cwLightGrey
 Ka 0.0000 0.0000 0.0000
@@ -28,6 +28,11 @@ map_bump %%
 newmtl cwDarkGrey
 Ka 0.0000 0.0000 0.0000
 Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+d 1.00
+
+newmtl cwGreen
+Ka 0.0000 0.0000 0.0000
+Kd 0.141176470588235 0.635294117647059 0.180392156862745 1.0
 d 1.00
 
 newmtl Foder_vit
@@ -70,11 +75,6 @@ d 1.00
 newmtl Metal_-_Steel_-_CornellIron_-_Stainless_Steel_-_Double_Angle_w_Powder_Coat
 Ka 0.0000 0.0000 0.0000
 Kd 0.619607843137255 0.619607843137255 0.619607843137255 1.0
-d 1.00
-
-newmtl Default
-Ka 0.0000 0.0000 0.0000
-Kd 0.498039215686275 0.498039215686275 0.498039215686275 1.0
 d 1.00
 
 newmtl Vitmlad_gips_-_tak
@@ -176,3 +176,13 @@ Kd 0.650980392156863 0.525490196078431 0.466666666666667 1.0
 d 1.00
 map_Kd textures\
 map_bump %%
+
+newmtl cwScreen
+Ka 0.0000 0.0000 0.0000
+Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
+d 1.00
+
+newmtl Steel_Carbon
+Ka 0.0000 0.0000 0.0000
+Kd 0 0 0 1.0
+d 1.00
