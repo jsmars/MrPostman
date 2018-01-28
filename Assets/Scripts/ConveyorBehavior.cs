@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Random = UnityEngine.Random;
 using Assets.Scripts.Enums;
+using Assets.Scripts;
 
 public class ConveyorBehavior : MonoBehaviour {
 
@@ -82,7 +83,7 @@ public class ConveyorBehavior : MonoBehaviour {
                 spawnPause = false;
                 _currentWave++;
                 waveSpawnRate *= 1.2f;
-                Debug.Log("NEW WAVE " + _currentWave);
+                Events.instance.Raise(new WaveChangeEvent(_currentWave));
                 SetupCurrentWave();
 
                 _timeToUnpause = WavePauseTimer;

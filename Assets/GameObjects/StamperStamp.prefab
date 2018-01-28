@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4475689738906876}
   - component: {fileID: 212717710759732332}
   m_Layer: 0
-  m_Name: StamperStamp 1
+  m_Name: StamperStamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
