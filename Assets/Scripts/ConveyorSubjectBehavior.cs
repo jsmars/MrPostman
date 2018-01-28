@@ -8,12 +8,13 @@ public class ConveyorSubjectBehavior : MonoBehaviour
     private Vector3 _currentVelocity = Vector3.zero;
     private Rigidbody _rigidBody;
 
+
     public float ConstantSpeed;
 
     // Use this for initialization
     void Start()
     {
-        _rigidBody = transform.GetComponent<Rigidbody>();
+        _rigidBody = transform.GetComponent<Rigidbody>();        
     }
 
     // Update is called once per frame

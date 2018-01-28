@@ -24,5 +24,10 @@ public class OnPickUp : MonoBehaviour {
     void onGrabbed(object sender, ObjectInteractEventArgs e)
     {
         lastPickup = e.target.GetComponent<DelayDestroy>();
+        var letterEntity = e.target.GetComponent<LetterEntity>();
+        if (letterEntity != null) 
+        {
+            letterEntity.LetterEntityGrabbed();
+        }
     }
 }
