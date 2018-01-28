@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 23530176996083552}
   - component: {fileID: 102111849207200136}
   m_Layer: 8
-  m_Name: Credits (1)
+  m_Name: howtoplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,8 +159,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1781668136124380}
   m_LocalRotation: {x: -0, y: -0.18112086, z: -0, w: 0.9834609}
-  m_LocalPosition: {x: -47.21739, y: -21.500004, z: -9.951404}
-  m_LocalScale: {x: 0.2404278, y: 0.24042764, z: 0.24042764}
+  m_LocalPosition: {x: -31.4, y: -22.555, z: -5.5}
+  m_LocalScale: {x: 0.22119358, y: 0.22119343, z: 0.22119343}
   m_Children: []
   m_Father: {fileID: 4816594562964364}
   m_RootOrder: 3
