@@ -20,12 +20,12 @@ namespace jsmars
         public int MessageDisplayCount = 4;
         public string GetName()
         {
-            throw new NotImplementedException();
+			return PlayerName.Name;
         }
 
         public ulong GetUID()
         {
-            throw new NotImplementedException();
+	        return 0;
         }
 
         public int ConnectionAttempts = 20;
@@ -52,7 +52,7 @@ namespace jsmars
 
         List<HighscoreEntry> statHighscoreList = new List<HighscoreEntry>();
         
-        List<OnlineMessage> msgs = new List<OnlineMessage>(); //ensure thread safety on list
+        public List<OnlineMessage> msgs = new List<OnlineMessage>(); //ensure thread safety on list
         Queue<HighscoreEntry> submissionQue = new Queue<HighscoreEntry>();
 
         public static Regex CleanName = new Regex("[^a-zA-Z0-9 -]");
@@ -65,6 +65,8 @@ namespace jsmars
         int hsFail = 0;
         string[] hsStats = new string[7];
         bool downloadDone;
+
+	    public event Action DownloadDone;
 
         #region Instance
 
@@ -122,6 +124,11 @@ namespace jsmars
 
                 Status = HighscoreStatus.Updated;
                 downloadDone = false;
+
+	            if (DownloadDone != null)
+	            {
+		            DownloadDone();
+	            }
             }
 
             #endregion
@@ -310,6 +317,7 @@ namespace jsmars
                         GetWebResponse(url);
                         SubmitStatus = HighscoreSubmitStatus.Idle;
                         Status = HighscoreStatus.Downloading;
+						Refresh();
                     }
                 }
                 catch (Exception exc)
@@ -374,7 +382,7 @@ namespace jsmars
         }
     }
 
-    class OnlineMessage
+    public class OnlineMessage
     {
         public int Version { get; private set; }
         public string Title { get; private set; }

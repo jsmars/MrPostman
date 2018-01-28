@@ -6,7 +6,7 @@ using VRTK.UnityEventHelper;
 public class RestartScene : MonoBehaviour {
 
 	private VRTK_Button_UnityEvents _buttonEvents;
-	private float _disabledTime = 5;
+	private float _disabledTime = 3;
 
 	public void Start()
 	{
@@ -16,7 +16,7 @@ public class RestartScene : MonoBehaviour {
 
 	private void HandlePush(object sender, Control3DEventArgs e)
 	{
-		if(_disabledTime > 0)
+		if(_disabledTime <= 0)
 		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}

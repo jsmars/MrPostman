@@ -29,7 +29,7 @@ public class WeightScaleBehavior : MonoBehaviour {
         {
             return;
         }
-          
+
         var weight = letterEntity.Weight;
         if (weight < 0.1) 
         {
