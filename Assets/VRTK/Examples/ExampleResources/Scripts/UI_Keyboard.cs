@@ -1,4 +1,6 @@
-﻿namespace VRTK.Examples
+﻿using UnityEngine.SceneManagement;
+
+namespace VRTK.Examples
 {
     using UnityEngine;
     using UnityEngine.UI;
@@ -23,6 +25,7 @@
         public void Enter()
         {
 	        PlayerName.Name = input.text;
+			SceneManager.LoadScene("andreas_vr");
         }
 
         private void Start()

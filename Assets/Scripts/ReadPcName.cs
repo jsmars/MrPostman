@@ -7,7 +7,14 @@ public class ReadPcName : MonoBehaviour
 
 	public void Start()
 	{
-		NameInput.text = SystemInfo.deviceName;
+		if (NameInput.text == "")
+		{
+			NameInput.text = SystemInfo.deviceName;
+		}
+		else
+		{
+			NameInput.text = PlayerName.Name;
+		}
 	}
 }
 

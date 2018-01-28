@@ -6,6 +6,7 @@ public class ScoreBarCounter : MonoBehaviour
 	public float Decrease;
 	private float _score = 1;
 	public float LetterIncrease = 0.1f;
+	private bool _gameOver;
 
 	public void Start()
 	{
@@ -21,8 +22,9 @@ public class ScoreBarCounter : MonoBehaviour
 	{
 		ChangeBar(-Decrease * Time.deltaTime);
 
-		if (_score <= 0)
+		if (_score <= 0 && !_gameOver)
 		{
+			_gameOver = true;
 			Events.instance.Raise(new GameOverEvent());
 		}
 	}

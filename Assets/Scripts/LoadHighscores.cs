@@ -6,6 +6,7 @@ public class LoadHighscores : MonoBehaviour
 {
 	public Transform HighscoresPanel;
 	public GameObject HighscoreTemplate;
+	public Text Player;
 	public Text PersonalBest;
 	public Text TotalPlays;
 
@@ -47,6 +48,7 @@ public class LoadHighscores : MonoBehaviour
 			panel.GetComponent<HighscoreSetter>().Set(highscore);
 		}
 
+		Player.text = PlayerName.Name;
 		PersonalBest.text = response.PersonalScore.ToString();
 		TotalPlays.text = response.TotalPlays.ToString();
 	}
