@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114807366637687574}
   - component: {fileID: 114417994929086204}
   - component: {fileID: 114314876669481028}
+  - component: {fileID: 65181923762669326}
   m_Layer: 0
   m_Name: Stamper
   m_TagString: Untagged
@@ -136,6 +137,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65181923762669326
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160044405992692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.029156435, z: 0.036705077}
+  m_Center: {x: 0, y: 0.0008321941, z: 0.020616991}
 --- !u!65 &65929606733705870
 BoxCollider:
   m_ObjectHideFlags: 1
