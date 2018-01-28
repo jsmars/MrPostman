@@ -31,11 +31,22 @@ public class WeightScaleBehavior : MonoBehaviour {
         }
 
         var weight = letterEntity.Weight;
+        if (weight < 0.1) 
+        {
+            weight = 0.2f;
+        }
+
         _weightDisplayText.text = string.Format("{0} kg", weight.ToString());
     }
 
     void OnTriggerExit(Collider collider) 
     {
+        var letterEntity = collider.GetComponent<LetterEntity>();
+        if (letterEntity == null)
+        {
+            return;
+        }
+
         _weightDisplayText.text = string.Format("{0} kg", "0.0");    
     }
 }
