@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 114977062054278278}
   - component: {fileID: 114337566485449320}
   - component: {fileID: 114354572344020132}
-  - component: {fileID: 82356338769871206}
+  - component: {fileID: 82266575886086578}
   m_Layer: 0
   m_Name: Box2
   m_TagString: Untagged
@@ -320,7 +320,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.468862, y: 0.12604558, z: 0.31158355}
   m_Center: {x: 0.0012413859, y: 0.057820022, z: 0.0005687326}
---- !u!82 &82356338769871206
+--- !u!82 &82266575886086578
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -331,7 +331,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -507,4 +507,4 @@ MonoBehaviour:
   NeedsVAT: 0
   IsStamped: 0
   LetterType: 1
-  GrabLetterAudio: {fileID: 8300000, guid: b6f6adc3959fda644ad1cdfef70397cb, type: 3}
+  GrabLetterAudio: {fileID: 8300000, guid: 67595bc1056bf7d4eac06c4c3bb7e0bc, type: 3}
