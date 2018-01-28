@@ -5,31 +5,37 @@ using VRTK;
 using VRTK.GrabAttachMechanics;
 using VRTK.SecondaryControllerGrabActions;
 using Assets.Scripts.Enums;
+using System;
 
-public class LetterEntity : MonoBehaviour {
-	public List<GameObject> Models;
-	public int Score;
+public class LetterEntity : MonoBehaviour
+{
+    public List<GameObject> Models;
+    public int Score;
     public LetterColor LetterColor;
     public int LetterNumber;
     public float Weight;
     public bool NeedsVAT;
     public bool IsStamped;
     public LetterTypeEnum LetterType;
+    public AudioClip GrabLetterAudio;
 
 
     public bool Used { get; private set; }
 
     // Use this for initialization
-    void Start () 
+    void Start()
     {
         var letter = gameObject.GetComponent<LetterEntity>();
         Helpers.SetStampColor(gameObject, LetterColor);
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = GrabLetterAudio;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public bool TryScore(BinEntity bin)
     {
@@ -63,6 +69,18 @@ public class LetterEntity : MonoBehaviour {
         Events.instance.Raise(new ScoreEvent(Score));
         Debug.Log("Scored letter: " + ToString());
         return true;
+    }
+
+    public void LetterEntityGrabbed()
+    {
+        try
+        {
+            GetComponent<AudioSource>().Play();
+        }
+        catch(Exception)
+        {
+            //Ignored
+        }
     }
 
     public override string ToString()
