@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using jsmars;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,9 @@ public class UpdateHighscores : MonoBehaviour
 	public GameObject HighscoreTemplate;
 	public Text Player;
 	public Text PersonalBest;
+	public Text PersonalPlays;
 	public Text TotalPlays;
+	public Text Message;
 	private jsmars.Highscore _highscore;
 	private int _currentCount;
 
@@ -50,7 +53,9 @@ public class UpdateHighscores : MonoBehaviour
 		Player.text = PlayerName.Name;
 
 		PersonalBest.text = _highscore.StatPersonalBest.Score.ToString();
-		TotalPlays.text = _highscore.StatGlobalTotalPlays;
+		PersonalPlays.text = _highscore.StatGlobalTotalPlays;
+		TotalPlays.text = _highscore.StatPersonalTotalPlays;
+		Message.text = string.Join("\n", _highscore.msgs.Select(x => x.Title).ToArray());
 	}
 
 	private void UpdateList(List<HighscoreEntry> highscores)

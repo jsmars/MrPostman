@@ -52,7 +52,7 @@ namespace jsmars
 
         List<HighscoreEntry> statHighscoreList = new List<HighscoreEntry>();
         
-        List<OnlineMessage> msgs = new List<OnlineMessage>(); //ensure thread safety on list
+        public List<OnlineMessage> msgs = new List<OnlineMessage>(); //ensure thread safety on list
         Queue<HighscoreEntry> submissionQue = new Queue<HighscoreEntry>();
 
         public static Regex CleanName = new Regex("[^a-zA-Z0-9 -]");
@@ -382,7 +382,7 @@ namespace jsmars
         }
     }
 
-    class OnlineMessage
+    public class OnlineMessage
     {
         public int Version { get; private set; }
         public string Title { get; private set; }
