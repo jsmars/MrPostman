@@ -147,10 +147,8 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114744063204618622, guid: 5af1c8e083912b745a962ab96f82d179,
-    type: 2}
-  secondaryGrabActionScript: {fileID: 114614932750633686, guid: 5af1c8e083912b745a962ab96f82d179,
-    type: 2}
+  grabAttachMechanicScript: {fileID: 114906322028375062}
+  secondaryGrabActionScript: {fileID: 114589518501116268}
   isUsable: 0
   holdButtonToUse: 1
   useOnlyIfGrabbed: 0
