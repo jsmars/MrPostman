@@ -1,5 +1,5 @@
 # Revit Wavefront OBJ Exporter 2.9.5 - (c) 2017 www.inglegreen.com
-# File Created: 2018-01-28 14:47:54
+# File Created: 2018-01-28 14:51:08
 
 newmtl cwLightGrey
 Ka 0.0000 0.0000 0.0000
@@ -30,12 +30,10 @@ Ka 0.0000 0.0000 0.0000
 Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
 d 1.00
 
-newmtl Foder_vit
+newmtl cwWhite
 Ka 0.0000 0.0000 0.0000
-Kd 1 1 1 1.0
+Kd 0.470588235294118 0.470588235294118 0.470588235294118 1.0
 d 1.00
-map_Kd textures\
-map_bump %%
 
 newmtl Glass
 Ka 0.0000 0.0000 0.0000
@@ -163,6 +161,13 @@ d 1.00
 newmtl Label_-_Sigma
 Ka 0.0000 0.0000 0.0000
 Kd 0.650980392156863 0.525490196078431 0.466666666666667 1.0
+d 1.00
+map_Kd textures\
+map_bump %%
+
+newmtl Foder_vit
+Ka 0.0000 0.0000 0.0000
+Kd 1 1 1 1.0
 d 1.00
 map_Kd textures\
 map_bump %%
