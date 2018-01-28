@@ -20,12 +20,12 @@ namespace jsmars
         public int MessageDisplayCount = 4;
         public string GetName()
         {
-            throw new NotImplementedException();
+			return PlayerName.Name;
         }
 
         public ulong GetUID()
         {
-            throw new NotImplementedException();
+	        return 0;
         }
 
         public int ConnectionAttempts = 20;
@@ -65,6 +65,8 @@ namespace jsmars
         int hsFail = 0;
         string[] hsStats = new string[7];
         bool downloadDone;
+
+	    public event Action DownloadDone;
 
         #region Instance
 
@@ -122,6 +124,11 @@ namespace jsmars
 
                 Status = HighscoreStatus.Updated;
                 downloadDone = false;
+
+	            if (DownloadDone != null)
+	            {
+		            DownloadDone();
+	            }
             }
 
             #endregion
@@ -310,6 +317,7 @@ namespace jsmars
                         GetWebResponse(url);
                         SubmitStatus = HighscoreSubmitStatus.Idle;
                         Status = HighscoreStatus.Downloading;
+						Refresh();
                     }
                 }
                 catch (Exception exc)
