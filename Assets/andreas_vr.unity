@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: f042001cbacbcab47838b7aff3904ff6,
+  m_LightingDataAsset: {fileID: 112000006, guid: 0b243d10c3bf0434d9eaa949aae602dd,
     type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -810,8 +810,13 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 33af27359b49eda48829e2c0bf1e12b8, type: 2}
+    - target: {fileID: 1118797285897564, guid: f4e64b79caf9d0043bddcb99fd81f278, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114503078599315616, guid: f4e64b79caf9d0043bddcb99fd81f278, type: 2}
+    - {fileID: 65397992917191628, guid: f4e64b79caf9d0043bddcb99fd81f278, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f4e64b79caf9d0043bddcb99fd81f278, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &287964309 stripped
@@ -4071,6 +4076,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 33af27359b49eda48829e2c0bf1e12b8, type: 2}
     m_RemovedComponents:
     - {fileID: 114503078599315616, guid: f4e64b79caf9d0043bddcb99fd81f278, type: 2}
+    - {fileID: 65397992917191628, guid: f4e64b79caf9d0043bddcb99fd81f278, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f4e64b79caf9d0043bddcb99fd81f278, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1747854140 stripped
@@ -5931,12 +5937,12 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 122
+      value: 1825
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -5946,7 +5952,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000010011952744, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3, type: 2}
       propertyPath: m_Layer
