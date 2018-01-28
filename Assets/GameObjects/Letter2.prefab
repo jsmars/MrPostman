@@ -231,7 +231,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   NeedsVAT: 0
   IsStamped: 0
   LetterType: 0
-  GrabLetterAudio: {fileID: 8300000, guid: 838c2b586902279479648d1fa8ce4590, type: 3}
+  GrabLetterAudio: {fileID: 8300000, guid: a3d87010be712f9459fc218142938193, type: 3}
 --- !u!114 &114859595570909818
 MonoBehaviour:
   m_ObjectHideFlags: 1

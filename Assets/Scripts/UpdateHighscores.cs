@@ -53,8 +53,8 @@ public class UpdateHighscores : MonoBehaviour
 		Player.text = PlayerName.Name;
 
 		PersonalBest.text = _highscore.StatPersonalBest.Score.ToString();
-		PersonalPlays.text = _highscore.StatGlobalTotalPlays;
-		TotalPlays.text = _highscore.StatPersonalTotalPlays;
+		PersonalPlays.text = _highscore.StatPersonalTotalPlays;
+		TotalPlays.text = _highscore.StatGlobalTotalPlays;
 		Message.text = string.Join("\n", _highscore.msgs.Select(x => x.Title).ToArray());
 	}
 

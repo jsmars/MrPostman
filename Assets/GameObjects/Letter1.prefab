@@ -229,7 +229,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
@@ -351,7 +351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f80b75882dd91c4f93c15b18161df0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeTimeSecs: 15
 --- !u!114 &114744063204618622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,10 +389,10 @@ MonoBehaviour:
   NeedsVAT: 0
   IsStamped: 0
   LetterType: 0
-  GrabLetterAudio: {fileID: 8300000, guid: 838c2b586902279479648d1fa8ce4590, type: 3}
+  GrabLetterAudio: {fileID: 8300000, guid: a3d87010be712f9459fc218142938193, type: 3}
 --- !u!114 &114934172659516360
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1918100532213140}
