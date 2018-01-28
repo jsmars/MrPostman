@@ -3,25 +3,40 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using Random = UnityEngine.Random;
+using Assets.Scripts.Enums;
+using Assets.Scripts;
 
 public class ConveyorBehavior : MonoBehaviour {
 
     public static Dictionary<string, LetterObj> LetterObjects = new Dictionary<string, LetterObj>();
-    public List<GameObject> letterPrefabs;
-    public Transform letterSpawn;
+    public List<GameObject> LetterPrefabs;
+    public Transform LetterSpawn;
+    public int WavePauseTimer;
+    public float Randomness;
+    
     private float _timeToSpawn;
-	public float _randomNess;
+    private float _timeToUnpause;
+    private bool spawnPause;
 	private Bounds _spawnArea;
 	private bool _gameOver;
+    private int _currentWave = -1;
+    private float waveSpawnRate = 1;
+    private int waveSpawnsLeft;
+    private int waveSpawnsTotal;
+    Helpers.WeightedList<LetterTypeEnum> waveTypes = new Helpers.WeightedList<LetterTypeEnum>();
+    List<int> validPostNumbers = new List<int>();
 
     public void Start ()
 	{
-		_spawnArea = letterSpawn.GetComponent<Collider>().bounds;
-		_timeToSpawn = 2;
+        _currentWave = 0;
+        _timeToUnpause = WavePauseTimer;
+        _timeToSpawn = 2;
+
+        _spawnArea = LetterSpawn.GetComponent<Collider>().bounds;
 
         Events.instance.AddListener<GameOverEvent>(SetGameOver);
 
-        foreach (var item in letterPrefabs)
+        foreach (var item in LetterPrefabs)
         {
             LetterObjects[item.name] = new LetterObj
             {
@@ -29,7 +44,34 @@ public class ConveyorBehavior : MonoBehaviour {
                 Script = item.GetComponent<LetterEntity>(),
             };
         }
-	}
+
+        SetupCurrentWave();
+
+        // Spawn BoxNumberBins
+        var baseBox = GameObject.Find("BoxNumberBinFIRST");
+        var xTot = -1.76f;
+        var yTot = 1.69f - 2.45f;
+        var xCount = 9;
+        var yCount = 4;
+
+        for (int y = 0; y < yCount; y++)
+        {
+            for (int x = 0; x < xCount; x++)
+            {
+                GameObject obj;
+                if (x == 0 && y == 0)
+                    obj = baseBox;
+                else
+                    obj = Instantiate(baseBox, baseBox.transform.position + new Vector3((xTot / (xCount - 1)) * x, (yTot / (yCount - 1)) * y, 0), baseBox.transform.rotation);
+                var entity = baseBox.GetComponent<BinEntity>();
+                var boxNum = Random.Range(10, 99);
+                entity.LetterNumber = boxNum;
+                entity.transform.GetComponent<TextMesh>().text = boxNum.ToString();
+                validPostNumbers.Add(boxNum);
+            }
+        }
+
+    }
 
 	public void OnDestroy()
 	{
@@ -49,27 +91,130 @@ public class ConveyorBehavior : MonoBehaviour {
 	    }
 
         _timeToSpawn -= Time.deltaTime;
-        if (_timeToSpawn < 0)
+
+        if (_timeToSpawn < 0 && !spawnPause)
         {
-            SpawnLetter();            
+            SpawnLetter();
+            Debug.Log("Wave " + _currentWave + " letter " + waveSpawnsLeft + " / " + waveSpawnsTotal);
+            waveSpawnsLeft--;
+        }
+
+        if (waveSpawnsLeft <= 0)
+        {
+            spawnPause = true;
+            _timeToUnpause -= Time.deltaTime;
+
+            if (_timeToUnpause < 0)
+            {
+                spawnPause = false;
+                _currentWave++;
+                waveSpawnRate *= 1.2f;
+                Events.instance.Raise(new WaveChangeEvent(_currentWave));
+                SetupCurrentWave();
+
+                _timeToUnpause = WavePauseTimer;
+            }
         }
 	}
 
-
-    void SpawnLetter()
+    private void SetupCurrentWave() 
     {
-        var spawnPosition = letterSpawn.position + GetRandomPointInSpawnArea();
+        switch (_currentWave)
+        {
+            case 0:
+                waveTypes.Add(LetterTypeEnum.Letter, 10);
+                waveSpawnsTotal = waveSpawnsLeft = 10;
+                break;
+            case 1:
+                waveTypes.Clear();
+                waveTypes.Add(LetterTypeEnum.Package, 10);
+                waveSpawnsTotal = waveSpawnsLeft = 10;
+                break;
+            case 2:
+                waveTypes.Clear();
+                waveTypes.Add(LetterTypeEnum.Illegal, 10);
+                waveSpawnsTotal = waveSpawnsLeft = 15;
+                break;
+            case 3:
+                waveTypes.Clear();
+                waveTypes.Add(LetterTypeEnum.Stamped, 1);
+                waveSpawnsTotal = waveSpawnsLeft = 5;
+                break;
+
+            case 4:
+                waveTypes.Clear();
+                waveTypes.Add(LetterTypeEnum.Numbered, 2);
+                waveSpawnsTotal = waveSpawnsLeft = 3;
+                break;
+
+            case 5:
+                waveTypes.Clear();
+                waveTypes.Add(LetterTypeEnum.Letter, 10);
+                waveTypes.Add(LetterTypeEnum.Package, 10);
+                waveTypes.Add(LetterTypeEnum.Illegal, 10);
+                waveTypes.Add(LetterTypeEnum.Stamped, 1);
+                waveTypes.Add(LetterTypeEnum.Numbered, 2);
+                waveSpawnsTotal = waveSpawnsLeft = 15;
+                break;
+
+            default:
+                waveSpawnsTotal = waveSpawnsLeft = 10 + _currentWave;
+                break;
+        }
+
+    }
+
+    List<LetterObj> temp = new List<LetterObj>();
+    private LetterObj GetObjFromType(LetterTypeEnum type)
+    {
+        // Save all of this type to a temp list
+        temp.Clear();
+        foreach (var item in LetterObjects)
+            if (item.Value.Script.LetterType == type)
+                temp.Add(item.Value);
+
+        // randomize from that list
+        if (temp.Count > 0)
+            return temp[Random.Range(0, temp.Count)];
+
+        // it doesnt exist
+        return null;
+    }
+    
+    private void SpawnLetter()
+    {
+        var spawnPosition = LetterSpawn.position + GetRandomPointInSpawnArea();
         var spawnRotation = Quaternion.Euler(new Vector3(0, Random.Range(0f, 360.0f), 0));
-        var randomSpawnTime = Random.Range(_randomNess, _randomNess+1);
+        var randomSpawnTime = Random.Range(Randomness, Randomness + 1) / waveSpawnRate;
         _timeToSpawn = randomSpawnTime;
 
-        //TODO: Add letter choosing logic here instead of just taking random letters
-        var list = Enumerable.ToList(LetterObjects.Values);
-        var type = list[Random.Range(0, list.Count)];
+        var t = waveTypes.RandomElement();
+        var type = GetObjFromType(t);
+        if (type == null)
+            Debug.LogError("No letter type added with type: " + t);
+        else
+        {
+            var newObj = Instantiate(type.GameObj, spawnPosition, spawnRotation);
+            var newLetter = newObj.GetComponent<LetterEntity>();
 
-        var newObj = Instantiate(type.GameObj, spawnPosition, spawnRotation);
-        var newLetter = newObj.GetComponent<LetterEntity>();
-	    newLetter.LetterColor = (LetterColor)Random.Range(0, Helpers.LetterColorCount);
+            switch (newLetter.LetterType)
+            {
+                case LetterTypeEnum.Letter:
+                    newLetter.LetterColor = (LetterColor)Random.Range(0, Helpers.LetterColorCount);
+                    break;
+
+                case LetterTypeEnum.Package:
+                    newLetter.Weight = Random.Range(1, 10);
+                    break;
+
+                case LetterTypeEnum.Numbered:
+                    var num = validPostNumbers[Random.Range(0, validPostNumbers.Count)];
+                    newLetter.LetterNumber = num;
+                    newLetter.transform.GetChild(0).GetComponent<TextMesh>().text = num.ToString();
+                    break;
+            }
+
+        }
     }
     
     private Vector3 GetRandomPointInSpawnArea()
@@ -85,6 +230,7 @@ public class ConveyorBehavior : MonoBehaviour {
                 return true;
         return false;
     }
+
 }
 
 public class LetterObj

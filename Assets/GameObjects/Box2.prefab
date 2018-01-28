@@ -91,6 +91,8 @@ GameObject:
   - component: {fileID: 65927192940010536}
   - component: {fileID: 54962852441153270}
   - component: {fileID: 114977062054278278}
+  - component: {fileID: 114337566485449320}
+  - component: {fileID: 114354572344020132}
   m_Layer: 0
   m_Name: Box2
   m_TagString: Untagged
@@ -317,6 +319,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.468862, y: 0.12604558, z: 0.31158355}
   m_Center: {x: 0.0012413859, y: 0.057820022, z: 0.0005687326}
+--- !u!114 &114337566485449320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1931373069095090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 0.5
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
+--- !u!114 &114354572344020132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1931373069095090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f80b75882dd91c4f93c15b18161df0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114496000704456120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -359,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 1
-  touchHighlightColor: {r: 1, g: 1, b: 0, a: 0.634}
+  touchHighlightColor: {r: 1, g: 0, b: 1, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
@@ -368,10 +398,8 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114744063204618622, guid: 5af1c8e083912b745a962ab96f82d179,
-    type: 2}
-  secondaryGrabActionScript: {fileID: 114614932750633686, guid: 5af1c8e083912b745a962ab96f82d179,
-    type: 2}
+  grabAttachMechanicScript: {fileID: 114625716452786214}
+  secondaryGrabActionScript: {fileID: 114496000704456120}
   isUsable: 0
   holdButtonToUse: 1
   useOnlyIfGrabbed: 0
@@ -391,6 +419,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Models: []
-  Score: 2
+  Score: 4
   LetterColor: 0
   LetterNumber: 0
+  Weight: 4.8
+  NeedsVAT: 0
+  IsStamped: 0
+  LetterType: 1

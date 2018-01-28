@@ -1,24 +1,32 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using VRTK;
+using VRTK.UnityEventHelper;
 
-public class RestartScene : MonoBehaviour
-{
-	private VRTK_ControllerEvents _vrtkControllerEvents;
+public class RestartScene : MonoBehaviour {
+
+	private VRTK_Button_UnityEvents _buttonEvents;
+	private float _disabledTime = 5;
 
 	public void Start()
 	{
-		_vrtkControllerEvents = GetComponent<VRTK_ControllerEvents>();
-		_vrtkControllerEvents.TouchpadPressed += Restart;
+		_buttonEvents = GetComponent<VRTK_Button_UnityEvents>() ?? gameObject.AddComponent<VRTK_Button_UnityEvents>();
+		_buttonEvents.OnPushed.AddListener(HandlePush);
 	}
 
-	public void OnDestroy()
+	private void HandlePush(object sender, Control3DEventArgs e)
 	{
-		_vrtkControllerEvents.TouchpadPressed -= Restart;
+		if(_disabledTime > 0)
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		}
 	}
 
-	private void Restart(object sender, ControllerInteractionEventArgs e)
+	public void Update()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		if(_disabledTime > 0)
+		{
+			_disabledTime -= Time.deltaTime;
+		}
 	}
 }

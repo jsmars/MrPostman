@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 65054670409212310}
   - component: {fileID: 54583154106468238}
   - component: {fileID: 114751272374331496}
+  - component: {fileID: 114153609881531594}
+  - component: {fileID: 114804538574810554}
   m_Layer: 0
   m_Name: Box1
   m_TagString: Untagged
@@ -217,6 +219,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.41163808, y: 0.21766412, z: 0.31034297}
   m_Center: {x: -0.00023055077, y: 0.10362929, z: 0.0011273026}
+--- !u!114 &114153609881531594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416319276694920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 0.5
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!114 &114224243272372940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 1
-  touchHighlightColor: {r: 1, g: 1, b: 0, a: 0.634}
+  touchHighlightColor: {r: 1, g: 0, b: 1, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
@@ -257,10 +276,8 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114744063204618622, guid: 5af1c8e083912b745a962ab96f82d179,
-    type: 2}
-  secondaryGrabActionScript: {fileID: 114614932750633686, guid: 5af1c8e083912b745a962ab96f82d179,
-    type: 2}
+  grabAttachMechanicScript: {fileID: 114224243272372940}
+  secondaryGrabActionScript: {fileID: 114708687127805540}
   isUsable: 0
   holdButtonToUse: 1
   useOnlyIfGrabbed: 0
@@ -291,6 +308,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Models: []
-  Score: 2
+  Score: 4
   LetterColor: 0
   LetterNumber: 0
+  Weight: 7.2
+  NeedsVAT: 0
+  IsStamped: 0
+  LetterType: 1
+--- !u!114 &114804538574810554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416319276694920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f80b75882dd91c4f93c15b18161df0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

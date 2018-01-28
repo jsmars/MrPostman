@@ -1,4 +1,6 @@
-﻿namespace VRTK.Examples
+﻿using UnityEngine.SceneManagement;
+
+namespace VRTK.Examples
 {
     using UnityEngine;
     using UnityEngine.UI;
@@ -22,8 +24,8 @@
 
         public void Enter()
         {
-            VRTK_Logger.Info("You've typed [" + input.text + "]");
-            input.text = "";
+	        PlayerName.Name = input.text;
+			SceneManager.LoadScene("andreas_vr");
         }
 
         private void Start()
