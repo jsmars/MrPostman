@@ -64,7 +64,7 @@ public class ConveyorBehavior : MonoBehaviour {
                     obj = baseBox;
                 else
                     obj = Instantiate(baseBox, baseBox.transform.position + new Vector3((xTot / (xCount - 1)) * x, (yTot / (yCount - 1)) * y, 0), baseBox.transform.rotation);
-                var entity = baseBox.GetComponent<BinEntity>();
+                var entity = obj.GetComponent<BinEntity>();
                 boxNum += Random.Range(1, 5);
                 entity.LetterNumber = boxNum;
                 entity.transform.GetComponent<TextMesh>().text = boxNum.ToString();
