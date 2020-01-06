@@ -4,7 +4,8 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
-Assets/andreas_vr*
+Assets/andreas_vr/*
+Assets/andreas_vr.meta
 
 # Visual Studio 2015 cache directory
 /.vs/
