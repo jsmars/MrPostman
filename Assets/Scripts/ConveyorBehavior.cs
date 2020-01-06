@@ -5,6 +5,7 @@ using System.Linq;
 using Random = UnityEngine.Random;
 using Assets.Scripts.Enums;
 using Assets.Scripts;
+using UnityEngine.UI;
 
 public class ConveyorBehavior : MonoBehaviour {
 
@@ -319,7 +320,7 @@ public class ConveyorBehavior : MonoBehaviour {
                 case LetterTypeEnum.Numbered:
                     var num = validPostNumbers[Random.Range(0, validPostNumbers.Count)];
                     newLetter.LetterNumber = num;
-                    newLetter.transform.GetChild(0).GetComponent<TextMesh>().text = num.ToString();
+                    newLetter.transform.GetComponent<Text>().text = num.ToString();
                     break;
             }
 
