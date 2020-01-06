@@ -46,7 +46,10 @@ public class BinEntity : MonoBehaviour {
         if (!_gameOver && !HasCollected(other))
         {
             var letter = TryGetLetter(other);
-            if (letter != null && letter.TryScore(this))
+            if (letter == null)
+                return;
+
+            if (letter.TryScore(this))
             {
                 //Destroy(other.gameObject);
                 Particles.Play();

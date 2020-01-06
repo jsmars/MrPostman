@@ -27,8 +27,11 @@ public class LetterEntity : MonoBehaviour
     {
         var letter = gameObject.GetComponent<LetterEntity>();
         Helpers.SetStampColor(gameObject, LetterColor);
-        GetComponent<AudioSource>().playOnAwake = false;
-        GetComponent<AudioSource>().clip = GrabLetterAudio;
+        if (GrabLetterAudio != null)
+        {
+            GetComponent<AudioSource>().playOnAwake = false;
+            GetComponent<AudioSource>().clip = GrabLetterAudio;
+        }
     }
 
     // Update is called once per frame

@@ -29,7 +29,7 @@ public class ConveyorBehavior : MonoBehaviour {
 
     public void Start ()
 	{
-        CurrentWave = 0;
+        CurrentWave = 6;
         _timeToUnpause = WavePauseTimer;
         _timeToSpawn = 2;
 
@@ -320,7 +320,7 @@ public class ConveyorBehavior : MonoBehaviour {
                 case LetterTypeEnum.Numbered:
                     var num = validPostNumbers[Random.Range(0, validPostNumbers.Count)];
                     newLetter.LetterNumber = num;
-                    newLetter.transform.GetComponent<Text>().text = num.ToString();
+                    newLetter.transform.GetComponentInChildren<Text>().text = num.ToString();
                     break;
             }
 
