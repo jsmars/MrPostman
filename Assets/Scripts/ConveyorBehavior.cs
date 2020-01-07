@@ -29,7 +29,7 @@ public class ConveyorBehavior : MonoBehaviour {
 
     public void Start ()
 	{
-        CurrentWave = 6;
+        CurrentWave = 0;
         _timeToUnpause = WavePauseTimer;
         _timeToSpawn = 2;
 
